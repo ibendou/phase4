@@ -1,56 +1,7 @@
 {
   "MiniTest": {
     "coverage": {
-      "/home/ubuntu/workspace/phase3_starter/app/models/store.rb": [
-        1,
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null,
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        null,
-        4,
-        101,
-        3,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        1,
-        63,
-        63,
-        63,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/home/ubuntu/workspace/phase3_starter/app/models/application_record.rb": [
-        1,
-        1,
-        null
-      ],
-      "/home/ubuntu/workspace/phase3_starter/app/models/assignment.rb": [
+      "/home/ubuntu/workspace/phase3/app/models/assignment.rb": [
         1,
         null,
         1,
@@ -108,7 +59,12 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/phase3_starter/app/models/employee.rb": [
+      "/home/ubuntu/workspace/phase3/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/phase3/app/models/employee.rb": [
         1,
         null,
         1,
@@ -181,37 +137,81 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/phase3_starter/app/controllers/application_controller.rb": [
+      "/home/ubuntu/workspace/phase3/app/models/store.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        4,
+        101,
+        3,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        63,
+        63,
+        63,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/phase3/app/helpers/application_helper.rb": [
         0,
         0
       ],
-      "/home/ubuntu/workspace/phase3_starter/app/jobs/application_job.rb": [
-        0,
-        0
-      ],
-      "/home/ubuntu/workspace/phase3_starter/app/helpers/application_helper.rb": [
-        0,
-        0
-      ],
-      "/home/ubuntu/workspace/phase3_starter/app/channels/application_cable/connection.rb": [
+      "/home/ubuntu/workspace/phase3/app/mailers/application_mailer.rb": [
         0,
         0,
         0,
         0
       ],
-      "/home/ubuntu/workspace/phase3_starter/app/channels/application_cable/channel.rb": [
+      "/home/ubuntu/workspace/phase3/app/jobs/application_job.rb": [
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/phase3/app/channels/application_cable/channel.rb": [
         0,
         0,
         0,
         0
       ],
-      "/home/ubuntu/workspace/phase3_starter/app/mailers/application_mailer.rb": [
+      "/home/ubuntu/workspace/phase3/app/channels/application_cable/connection.rb": [
         0,
         0,
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/phase3/app/controllers/application_controller.rb": [
         0,
         0
       ]
     },
-    "timestamp": 1553104265
+    "timestamp": 1554043084
   }
 }
