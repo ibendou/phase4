@@ -1,15 +1,83 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Phase3Starter</title>
+    <title>A&M Creamery</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <style>
+    body, html {
+  height: 100%;
+}
+.bg {
+  /* The image used */
+  background-image: url(https://image.freepik.com/free-photo/ice-cream-background_23-2147831842.jpg);
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: scroll;
+
+}
+</style>
   </head>
 
-  <body>
-    <%= yield %>
+  <body> 
+ <div class="bg">
+    <!-- Dropdown Structure -->
+    <ul id="dropdown1" class="dropdown-content">
+        <li><%= link_to "List Employees", employees_path %></li>
+        <li><%= link_to "Add an Employee", new_employee_path %></li>
+    </ul> 
+    
+       <ul id="dropdown2" class="dropdown-content">
+        <li><%= link_to "List Stores", stores_path %></li>
+        <li><%= link_to "Add a Store", new_store_path %></li>
+    </ul> 
+    <nav>
+         <div class="nav-wrapper">
+                &nbsp&nbsp     
+              <a href="/" class="brand-logo">A&M Creamery</a> 
+ 
+    <ul class="right">
+        <li><%= link_to "Assignments", assignments_path %></li>
+
+        <!-- Dropdown Trigger -->       
+        <li><a class="dropdown-button" href="/employees" data-activates="dropdown1">Employees<i class="material-icons right">arrow_drop_down</i></a></li>
+
+        <!-- Dropdown Trigger -->       
+        <li><a class="dropdown-button" href="/stores" data-activates="dropdown2">Stores<i class="material-icons right">arrow_drop_down</i></a></li>
+        </ul> 
+ 
+  </div> 
+  </nav>
+  
+  <div class="row">
+          <div class="center-align">
+                  <!-- MAIN CONTENT GOES HERE -->      
+                  <%= yield %>    
+          </div> 
+ 
+    <div class="center-align"> 
+    </div>
+     </div> 
+ 
+  <footer>
+         <div class="center-align">
+                  <div class="center-align">
+                 <%= render partial: 'partials/footer' %>
+            </div>
+        </div>
+    </footer>
+    
+  </div>  
+</body>
   </body>
 </html>
