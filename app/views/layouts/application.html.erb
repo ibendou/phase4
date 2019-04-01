@@ -37,14 +37,20 @@
         <li><%= link_to "List Active Employees", employee_active_path %></li>
         <li><%= link_to "List Inactive Employees", employee_inactive_path %></li>
         <li><%= link_to "Add an Employee", new_employee_path %></li>
-        
     </ul> 
     
-       <ul id="dropdown2" class="dropdown-content">
-        <li><%= link_to "List Stores", stores_path %></li>
+    <ul id="dropdown2" class="dropdown-content">
+        <li><%= link_to "List All Stores", stores_path %></li>
         <li><%= link_to "List Active Stores", store_active_path %></li>
         <li><%= link_to "List Inactive Stores", store_inactive_path %></li>
         <li><%= link_to "Add a Store", new_store_path %></li>
+    </ul> 
+    
+    <ul id="dropdown3" class="dropdown-content">
+        <li><%= link_to "List All Assignments", assignments_path %></li>
+        <li><%= link_to "List Current Assignments", assignment_current_path %></li>
+        <li><%= link_to "List Past Assignments", assignment_past_path %></li>
+        <li><%= link_to "Add an Assignment", new_assignment_path %></li>
     </ul> 
     <nav>
          <div class="nav-wrapper">
@@ -52,7 +58,8 @@
               <a href="/" class="brand-logo">A&M Creamery</a> 
   
     <ul class="right">
-        <li><%= link_to "Assignments", assignments_path %></li>
+        <!-- Dropdown Trigger -->       
+        <li><a class="dropdown-button" href="/assignments" data-activates="dropdown3">Assignments<i class="material-icons right">arrow_drop_down</i></a></li>
 
         <!-- Dropdown Trigger -->       
         <li><a class="dropdown-button" href="/employees" data-activates="dropdown1">Employees<i class="material-icons right">arrow_drop_down</i></a></li>

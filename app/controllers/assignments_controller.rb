@@ -7,6 +7,13 @@ class AssignmentsController < ApplicationController
     @assignments = Assignment.all
   end
 
+  def current
+    @assignments = Assignment.current.paginate(:page => params[:page]).per_page(10)
+  end
+  
+  def past
+    @assignments = Assignment.past.paginate(:page => params[:page]).per_page(10)
+  end
   # GET /assignments/1
   # GET /assignments/1.json
   def show

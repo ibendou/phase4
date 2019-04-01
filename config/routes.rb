@@ -9,4 +9,7 @@ Rails.application.routes.draw do
   
   get "active_" , to: "stores#active" , as: :store_active
   get "inactive_" , to: "stores#inactive" , as: :store_inactive
+  
+  get "current" , to: "assignments#current" , as: :assignment_current
+  get "past" , to: "assignments#past" , as: :assignment_past
 end
