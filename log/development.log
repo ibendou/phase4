@@ -1776,3 +1776,1106 @@ Processing by AssignmentsController#new as HTML
 Completed 200 OK in 251ms (Views: 240.8ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/assignments/new" for 86.36.37.201 at 2019-04-01 12:16:55 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by AssignmentsController#new as HTML
+  Rendering assignments/new.html.erb within layouts/application
+  Rendered assignments/_form.html.erb (26.1ms)
+  Rendered assignments/new.html.erb within layouts/application (28.3ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 746ms (Views: 707.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 86.36.37.201 at 2019-04-01 12:20:52 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+  Rendered partials/_footer.html.erb (0.8ms)
+Completed 200 OK in 156ms (Views: 153.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assignments" for 86.36.37.201 at 2019-04-01 12:21:37 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#index as HTML
+  Rendering assignments/index.html.erb within layouts/application
+  [1m[36mAssignment Load (0.5ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments"[0m
+  ↳ app/views/assignments/index.html.erb:18
+  Rendered assignments/index.html.erb within layouts/application (2.8ms)
+  Rendered partials/_footer.html.erb (0.6ms)
+Completed 200 OK in 80ms (Views: 76.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stores" for 86.36.37.201 at 2019-04-01 12:23:47 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.5ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:21
+  Rendered stores/index.html.erb within layouts/application (30.2ms)
+  Rendered partials/_footer.html.erb (0.6ms)
+Completed 200 OK in 123ms (Views: 95.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assignments" for 86.36.37.201 at 2019-04-01 12:36:27 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#index as HTML
+  Rendering assignments/index.html.erb within layouts/application
+  [1m[36mAssignment Load (0.3ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments"[0m
+  ↳ app/views/assignments/index.html.erb:18
+  Rendered assignments/index.html.erb within layouts/application (3.9ms)
+  Rendered partials/_footer.html.erb (0.6ms)
+Completed 200 OK in 172ms (Views: 169.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assignments/new" for 86.36.37.201 at 2019-04-01 12:36:32 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#new as HTML
+  Rendering assignments/new.html.erb within layouts/application
+  Rendered assignments/_form.html.erb (20.7ms)
+  Rendered assignments/new.html.erb within layouts/application (22.2ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `date_of_birth' for #<Assignment:0x007fee8258d658>):
+    24:   <div class="input-field"> 
+    25:     <%= form.label :start_date %>'
+    26:     <%= form.text_field :start_date, prompt: "Start Date", class: "datepicker",
+    27:     :value => (form.object.date_of_birth.strftime('%B %d, %Y') if form.object.date_of_birth != nil)%>
+    28:   </div>
+    29: 
+    30:   <div class="input-field"> 
+  
+app/views/assignments/_form.html.erb:27:in `block in _app_views_assignments__form_html_erb__3627161653949894164_70331182593560'
+app/views/assignments/_form.html.erb:1:in `_app_views_assignments__form_html_erb__3627161653949894164_70331182593560'
+app/views/assignments/new.html.erb:3:in `_app_views_assignments_new_html_erb___2720493166950529300_70331182735100'
+Started GET "/assignments/new" for 86.36.37.201 at 2019-04-01 12:42:46 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#new as HTML
+  Rendering assignments/new.html.erb within layouts/application
+  Rendered assignments/_form.html.erb (4.8ms)
+  Rendered assignments/new.html.erb within layouts/application (6.4ms)
+  Rendered partials/_footer.html.erb (0.6ms)
+Completed 200 OK in 218ms (Views: 215.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assignments/new" for 86.36.37.201 at 2019-04-01 12:43:23 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#new as HTML
+  Rendering assignments/new.html.erb within layouts/application
+  Rendered assignments/_form.html.erb (12.0ms)
+  Rendered assignments/new.html.erb within layouts/application (14.0ms)
+  Rendered partials/_footer.html.erb (0.6ms)
+Completed 200 OK in 212ms (Views: 207.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/assignments" for 86.36.37.201 at 2019-04-01 12:45:57 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ETzFs/+WAgL8AGV8Jrr2iC+frTftmsQSHUIWvhWUsknTcXeanWXeQijuIZ9sWjR0omtx69vhq6lJhNOwVAFRnw==", "assignment"=>{"store_id"=>"1", "employee_id"=>"1", "start_date"=>"July 09, 2013", "end_date"=>"July 12, 2017", "pay_level"=>"4"}, "commit"=>"Create Assignment"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+  ↳ app/models/assignment.rb:43
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+  ↳ app/models/assignment.rb:50
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/assignments_controller.rb:30
+  Rendering assignments/new.html.erb within layouts/application
+  Rendered assignments/_form.html.erb (5.4ms)
+  Rendered assignments/new.html.erb within layouts/application (7.2ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 209ms (Views: 83.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/stores" for 86.36.37.201 at 2019-04-01 12:46:39 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:21
+  Rendered stores/index.html.erb within layouts/application (3.8ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 90ms (Views: 87.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 86.36.37.201 at 2019-04-01 12:53:14 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 121ms (Views: 118.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 86.36.37.201 at 2019-04-01 12:55:48 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 178ms (Views: 176.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assignments" for 86.36.37.201 at 2019-04-01 12:59:56 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#index as HTML
+  Rendering assignments/index.html.erb within layouts/application
+  [1m[36mAssignment Load (0.4ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments"[0m
+  ↳ app/views/assignments/index.html.erb:18
+  Rendered assignments/index.html.erb within layouts/application (4.0ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 119ms (Views: 116.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/stores" for 86.36.37.201 at 2019-04-01 13:00:01 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:21
+  Rendered stores/index.html.erb within layouts/application (20.4ms)
+  Rendered partials/_footer.html.erb (0.8ms)
+Completed 200 OK in 240ms (Views: 234.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/stores/1/edit" for 86.36.37.201 at 2019-04-01 13:00:04 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/stores_controller.rb:67
+  Rendering stores/edit.html.erb within layouts/application
+  Rendered stores/_form.html.erb (16.7ms)
+  Rendered stores/edit.html.erb within layouts/application (18.3ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 219ms (Views: 214.9ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/stores/1" for 86.36.37.201 at 2019-04-01 13:00:27 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H5lKpu/MaH1n8cboHhYy7CvqFG6qS/Xer/LXK+iZQhrd1PiPjT+0PbMfggtU9vAQph7IspwwmmX7NBIlqQyhzA==", "store"=>{"name"=>"dfghjk", "street"=>"ertgyhjukilo", "city"=>"erfgthyjukilo", "state"=>"PA", "zip"=>"12345", "phone"=>"4122683259", "latitude"=>"45.6666", "longitude"=>"80.54675", "active"=>"1"}, "commit"=>"Update Store", "id"=>"1"}
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/stores_controller.rb:67
+Unpermitted parameter: :active
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/stores_controller.rb:44
+  [1m[36mStore Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE "stores"."name" = ? AND "stores"."id" != ? LIMIT ?[0m  [["name", "dfghjk"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/stores_controller.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/stores_controller.rb:44
+Redirected to https://newwork-ibendou.c9users.io/stores/1
+Completed 302 Found in 9ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/stores/1" for 86.36.37.201 at 2019-04-01 13:00:28 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/stores_controller.rb:67
+  Rendering stores/show.html.erb within layouts/application
+  Rendered stores/show.html.erb within layouts/application (1.4ms)
+  Rendered partials/_footer.html.erb (0.6ms)
+Completed 200 OK in 79ms (Views: 75.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assignments" for 86.36.37.201 at 2019-04-01 13:00:31 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#index as HTML
+  Rendering assignments/index.html.erb within layouts/application
+  [1m[36mAssignment Load (0.3ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments"[0m
+  ↳ app/views/assignments/index.html.erb:18
+  Rendered assignments/index.html.erb within layouts/application (2.3ms)
+  Rendered partials/_footer.html.erb (0.6ms)
+Completed 200 OK in 166ms (Views: 163.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assignments" for 86.36.37.201 at 2019-04-01 13:00:52 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#index as HTML
+  Rendering assignments/index.html.erb within layouts/application
+  [1m[36mAssignment Load (0.3ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments"[0m
+  ↳ app/views/assignments/index.html.erb:18
+  Rendered assignments/index.html.erb within layouts/application (2.3ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 227ms (Views: 225.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assignments/new" for 86.36.37.201 at 2019-04-01 13:00:54 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#new as HTML
+  Rendering assignments/new.html.erb within layouts/application
+  Rendered assignments/_form.html.erb (4.4ms)
+  Rendered assignments/new.html.erb within layouts/application (6.0ms)
+  Rendered partials/_footer.html.erb (0.6ms)
+Completed 200 OK in 151ms (Views: 149.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/assignments" for 86.36.37.201 at 2019-04-01 13:02:24 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d19/ZT7jOq+q3ehKad9q8SSoLl2NFB+FbnQudnxoKEK1Es1MXBDm734zrKkjP6gNqVzygbtvcD46sut4Pf3LlA==", "assignment"=>{"store_id"=>"1", "employee_id"=>"1", "start_date"=>"April 09, 2012", "end_date"=>"April 06, 2016", "pay_level"=>"5"}, "commit"=>"Create Assignment"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+  ↳ app/models/assignment.rb:43
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+  ↳ app/models/assignment.rb:50
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/assignments_controller.rb:30
+  Rendering assignments/new.html.erb within layouts/application
+  Rendered assignments/_form.html.erb (12.3ms)
+  Rendered assignments/new.html.erb within layouts/application (13.9ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 185ms (Views: 167.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assignments" for 86.36.37.201 at 2019-04-01 13:02:51 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#index as HTML
+  Rendering assignments/index.html.erb within layouts/application
+  [1m[36mAssignment Load (0.3ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments"[0m
+  ↳ app/views/assignments/index.html.erb:18
+  Rendered assignments/index.html.erb within layouts/application (2.7ms)
+  Rendered partials/_footer.html.erb (0.6ms)
+Completed 200 OK in 74ms (Views: 71.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores" for 86.36.37.201 at 2019-04-01 13:02:56 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:21
+  Rendered stores/index.html.erb within layouts/application (5.4ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 94ms (Views: 91.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stores/1/edit" for 86.36.37.201 at 2019-04-01 13:03:03 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/stores_controller.rb:67
+  Rendering stores/edit.html.erb within layouts/application
+  Rendered stores/_form.html.erb (10.5ms)
+  Rendered stores/edit.html.erb within layouts/application (13.6ms)
+  Rendered partials/_footer.html.erb (1.0ms)
+Completed 200 OK in 175ms (Views: 170.2ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/stores/1" for 86.36.37.201 at 2019-04-01 13:03:10 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pnASYCaNhQVIEoVnnUAv2Ar8FI0BydXjsMZheAJR7ndkPaBJRH5ZRZz8wYTXoO0khwjIUTeyuljkAKR2Q8QNoQ==", "store"=>{"name"=>"dfghjk", "street"=>"ertgyhjukilo", "city"=>"erfgthyjukilo", "state"=>"PA", "zip"=>"12345", "phone"=>"4122683259", "latitude"=>"45.6666", "longitude"=>"80.54675", "active"=>"1"}, "commit"=>"Update Store", "id"=>"1"}
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/stores_controller.rb:67
+Unpermitted parameter: :active
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/stores_controller.rb:44
+  [1m[36mStore Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE "stores"."name" = ? AND "stores"."id" != ? LIMIT ?[0m  [["name", "dfghjk"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/stores_controller.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/stores_controller.rb:44
+Redirected to https://newwork-ibendou.c9users.io/stores/1
+Completed 302 Found in 8ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/stores/1" for 86.36.37.201 at 2019-04-01 13:03:10 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/stores_controller.rb:67
+  Rendering stores/show.html.erb within layouts/application
+  Rendered stores/show.html.erb within layouts/application (1.5ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 201ms (Views: 197.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stores/1" for 86.36.37.201 at 2019-04-01 13:05:01 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/stores_controller.rb:67
+  Rendering stores/show.html.erb within layouts/application
+  Rendered stores/show.html.erb within layouts/application (1.7ms)
+  Rendered partials/_footer.html.erb (1.7ms)
+Completed 200 OK in 111ms (Views: 107.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stores" for 86.36.37.201 at 2019-04-01 13:05:12 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (1.1ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:22
+  Rendered stores/index.html.erb within layouts/application (4.6ms)
+  Rendered partials/_footer.html.erb (0.6ms)
+Completed 200 OK in 173ms (Views: 169.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/stores" for 86.36.37.201 at 2019-04-01 13:06:36 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:22
+  Rendered stores/index.html.erb within layouts/application (3.2ms)
+  Rendered partials/_footer.html.erb (0.8ms)
+Completed 200 OK in 210ms (Views: 208.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stores/1/edit" for 86.36.37.201 at 2019-04-01 13:06:39 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/stores_controller.rb:67
+  Rendering stores/edit.html.erb within layouts/application
+  Rendered stores/_form.html.erb (6.2ms)
+  Rendered stores/edit.html.erb within layouts/application (8.0ms)
+  Rendered partials/_footer.html.erb (0.6ms)
+Completed 200 OK in 121ms (Views: 118.4ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/stores/1" for 86.36.37.201 at 2019-04-01 13:06:43 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"htuYOJavvUB8YwKPMeXozk9gEC86y9pbrBzy0/o9mTpElioR9FxhAKiNRmx7BSoywpTM8wywteD42jfdu6h67A==", "store"=>{"name"=>"dfghjk", "street"=>"ertgyhjukilo", "city"=>"erfgthyjukilo", "state"=>"PA", "zip"=>"12345", "phone"=>"4122683259", "latitude"=>"45.6666", "longitude"=>"80.54675", "active"=>"1"}, "commit"=>"Update Store", "id"=>"1"}
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/stores_controller.rb:67
+Unpermitted parameter: :active
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/stores_controller.rb:44
+  [1m[36mStore Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE "stores"."name" = ? AND "stores"."id" != ? LIMIT ?[0m  [["name", "dfghjk"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/stores_controller.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/stores_controller.rb:44
+Redirected to https://newwork-ibendou.c9users.io/stores/1
+Completed 302 Found in 7ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/stores/1" for 86.36.37.201 at 2019-04-01 13:06:44 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/stores_controller.rb:67
+  Rendering stores/show.html.erb within layouts/application
+  Rendered stores/show.html.erb within layouts/application (1.4ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 98ms (Views: 94.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stores/1" for 86.36.37.201 at 2019-04-01 13:07:27 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/stores_controller.rb:67
+  Rendering stores/show.html.erb within layouts/application
+  Rendered stores/show.html.erb within layouts/application (1.3ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 68ms (Views: 64.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stores/1/edit" for 86.36.37.201 at 2019-04-01 13:07:32 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.5ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/stores_controller.rb:67
+  Rendering stores/edit.html.erb within layouts/application
+  Rendered stores/_form.html.erb (7.0ms)
+  Rendered stores/edit.html.erb within layouts/application (8.7ms)
+  Rendered partials/_footer.html.erb (0.6ms)
+Completed 200 OK in 169ms (Views: 165.6ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/stores/1" for 86.36.37.201 at 2019-04-01 13:07:37 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Aof5V/2tkoORsuxbAIPBD2UYI+7Uptjqjm7M7vOFerrAykt+n15Ow0VcqLhKYwPz6Oz/MuLdt1HaqAngshCZbA==", "store"=>{"name"=>"dfghjk", "street"=>"ertgyhjukilo", "city"=>"erfgthyjukilo", "state"=>"PA", "zip"=>"12345", "phone"=>"4122683259", "latitude"=>"45.6666", "longitude"=>"80.54675", "active"=>"1"}, "commit"=>"Update Store", "id"=>"1"}
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/stores_controller.rb:67
+Unpermitted parameter: :active
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/stores_controller.rb:44
+  [1m[36mStore Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE "stores"."name" = ? AND "stores"."id" != ? LIMIT ?[0m  [["name", "dfghjk"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/stores_controller.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/stores_controller.rb:44
+Redirected to https://newwork-ibendou.c9users.io/stores/1
+Completed 302 Found in 10ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/stores/1" for 86.36.37.201 at 2019-04-01 13:07:37 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/stores_controller.rb:67
+  Rendering stores/show.html.erb within layouts/application
+  Rendered stores/show.html.erb within layouts/application (1.9ms)
+  Rendered partials/_footer.html.erb (0.6ms)
+Completed 200 OK in 154ms (Views: 149.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stores" for 86.36.37.201 at 2019-04-01 13:07:43 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:22
+  Rendered stores/index.html.erb within layouts/application (3.7ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 197ms (Views: 195.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stores" for 86.36.37.201 at 2019-04-01 13:09:00 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.5ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:22
+  Rendered stores/index.html.erb within layouts/application (131.6ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 223ms (Views: 203.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/stores/1/edit" for 86.36.37.201 at 2019-04-01 13:09:03 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.5ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/stores_controller.rb:67
+  Rendering stores/edit.html.erb within layouts/application
+  Rendered stores/_form.html.erb (19.0ms)
+  Rendered stores/edit.html.erb within layouts/application (21.1ms)
+  Rendered partials/_footer.html.erb (0.9ms)
+Completed 200 OK in 214ms (Views: 208.9ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/stores/1" for 86.36.37.201 at 2019-04-01 13:09:08 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ucVuhq1BiBVVtc3RKb4rUS0tfL8dBtjIkbiOR9qS3qF7iNyvz7JUVYFbiTJjXumtoNmgYyt9t3PFfktJmwc9dw==", "store"=>{"name"=>"dfghjk", "street"=>"ertgyhjukilo", "city"=>"erfgthyjukilo", "state"=>"PA", "zip"=>"12345", "phone"=>"4122683259", "latitude"=>"45.6666", "longitude"=>"80.54675", "active"=>"1"}, "commit"=>"Update Store", "id"=>"1"}
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/stores_controller.rb:67
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/stores_controller.rb:44
+  [1m[36mStore Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE "stores"."name" = ? AND "stores"."id" != ? LIMIT ?[0m  [["name", "dfghjk"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/stores_controller.rb:44
+  [1m[36mStore Update (1.5ms)[0m  [1m[33mUPDATE "stores" SET "active" = ?, "updated_at" = ? WHERE "stores"."id" = ?[0m  [["active", 1], ["updated_at", "2019-04-01 13:09:08.102661"], ["id", 1]]
+  ↳ app/controllers/stores_controller.rb:44
+  [1m[35m (39.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/stores_controller.rb:44
+Redirected to https://newwork-ibendou.c9users.io/stores/1
+Completed 302 Found in 53ms (ActiveRecord: 41.9ms)
+
+
+Started GET "/stores/1" for 86.36.37.201 at 2019-04-01 13:09:08 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/stores_controller.rb:67
+  Rendering stores/show.html.erb within layouts/application
+  Rendered stores/show.html.erb within layouts/application (1.5ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 71ms (Views: 68.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assignments" for 86.36.37.201 at 2019-04-01 13:09:13 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#index as HTML
+  Rendering assignments/index.html.erb within layouts/application
+  [1m[36mAssignment Load (0.3ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments"[0m
+  ↳ app/views/assignments/index.html.erb:18
+  Rendered assignments/index.html.erb within layouts/application (3.0ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 188ms (Views: 176.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assignments/new" for 86.36.37.201 at 2019-04-01 13:09:16 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#new as HTML
+  Rendering assignments/new.html.erb within layouts/application
+  Rendered assignments/_form.html.erb (4.1ms)
+  Rendered assignments/new.html.erb within layouts/application (5.5ms)
+  Rendered partials/_footer.html.erb (0.6ms)
+Completed 200 OK in 95ms (Views: 86.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/assignments" for 86.36.37.201 at 2019-04-01 13:14:22 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CMFdEdkMJOMuKcgzKTetROFR029hxBIGUvqTMo+KWAnKjO84u//4o/rHjNBj12+4bKUPs1e/fb0GPFY8zh+73w==", "assignment"=>{"store_id"=>"1", "employee_id"=>"1", "start_date"=>"April 08, 2014", "end_date"=>"April 16, 2019", "pay_level"=>"4"}, "commit"=>"Create Assignment"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+  ↳ app/models/assignment.rb:43
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+  ↳ app/models/assignment.rb:50
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/assignments_controller.rb:30
+  Rendering assignments/new.html.erb within layouts/application
+  Rendered assignments/_form.html.erb (6.0ms)
+  Rendered assignments/new.html.erb within layouts/application (8.2ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 255ms (Views: 193.3ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/assignments" for 86.36.37.201 at 2019-04-01 13:16:13 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r8p3dxGJ42fVlyh5TR/vcwF/l7/hW8FDo5OWTy5Fg09th8Vec3o/JwF5bJoH/y2PjItLY9cgrvj3VVNBb9BgmQ==", "assignment"=>{"store_id"=>"1", "employee_id"=>"1", "start_date"=>"April 08, 2014", "end_date"=>"April 16, 2019", "pay_level"=>"4"}, "commit"=>"Create Assignment"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+  ↳ app/models/assignment.rb:43
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+  ↳ app/models/assignment.rb:50
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/assignments_controller.rb:30
+  Rendering assignments/new.html.erb within layouts/application
+  Rendered assignments/_form.html.erb (4.6ms)
+  Rendered assignments/new.html.erb within layouts/application (6.4ms)
+  Rendered partials/_footer.html.erb (0.8ms)
+Completed 200 OK in 84ms (Views: 72.5ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/assignments" for 86.36.37.201 at 2019-04-01 13:16:43 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AMYyhsnl47tDtRNHY+kgCQCvIZb0iBKz5DQte3zkfl/Ci4CvqxY/+5dbV6QpCeL1jVv9SsLzfQiw8uh1PXGdiQ==", "assignment"=>{"store_id"=>"1", "employee_id"=>"1", "start_date"=>"April 08, 2014", "end_date"=>"April 14, 2016", "pay_level"=>"4"}, "commit"=>"Create Assignment"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+  ↳ app/models/assignment.rb:43
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+  ↳ app/models/assignment.rb:50
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/assignment.rb:33
+  [1m[36mAssignment Load (0.3ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."employee_id" = ?[0m  [["employee_id", 1]]
+  ↳ app/models/employee.rb:38
+  [1m[36mAssignment Create (2.2ms)[0m  [1m[32mINSERT INTO "assignments" ("store_id", "employee_id", "start_date", "end_date", "pay_level", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["store_id", 1], ["employee_id", 1], ["start_date", "2014-04-08"], ["end_date", "2016-04-14"], ["pay_level", 4], ["created_at", "2019-04-01 13:16:43.492108"], ["updated_at", "2019-04-01 13:16:43.492108"]]
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[35m (24.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/assignments_controller.rb:30
+Redirected to https://newwork-ibendou.c9users.io/assignments/1
+Completed 302 Found in 68ms (ActiveRecord: 28.4ms)
+
+
+Started GET "/assignments/1" for 86.36.37.201 at 2019-04-01 13:16:43 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAssignment Load (0.5ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/assignments_controller.rb:67
+  Rendering assignments/show.html.erb within layouts/application
+  Rendered assignments/show.html.erb within layouts/application (1.8ms)
+  Rendered partials/_footer.html.erb (0.8ms)
+Completed 200 OK in 88ms (Views: 84.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assignments" for 86.36.37.201 at 2019-04-01 13:16:53 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#index as HTML
+  Rendering assignments/index.html.erb within layouts/application
+  [1m[36mAssignment Load (0.3ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments"[0m
+  ↳ app/views/assignments/index.html.erb:18
+  Rendered assignments/index.html.erb within layouts/application (4.3ms)
+  Rendered partials/_footer.html.erb (0.9ms)
+Completed 200 OK in 233ms (Views: 231.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores/new" for 86.36.37.201 at 2019-04-01 13:47:47 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#new as HTML
+  Rendering stores/new.html.erb within layouts/application
+  Rendered stores/_form.html.erb (9.7ms)
+  Rendered stores/new.html.erb within layouts/application (12.4ms)
+  Rendered partials/_footer.html.erb (1.0ms)
+Completed 200 OK in 154ms (Views: 111.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assignments" for 86.36.37.201 at 2019-04-01 13:47:57 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#index as HTML
+  Rendering assignments/index.html.erb within layouts/application
+  [1m[36mAssignment Load (0.4ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments"[0m
+  ↳ app/views/assignments/index.html.erb:18
+  Rendered assignments/index.html.erb within layouts/application (15.2ms)
+  Rendered partials/_footer.html.erb (0.8ms)
+Completed 200 OK in 200ms (Views: 183.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assignments" for 86.36.37.201 at 2019-04-01 13:47:58 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assignments" for 86.36.37.201 at 2019-04-01 13:47:58 +0000
+Processing by AssignmentsController#index as HTML
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#index as HTML
+  Rendering assignments/index.html.erb within layouts/application
+  Rendering assignments/index.html.erb within layouts/application
+  [1m[36mAssignment Load (0.5ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments"[0m
+  [1m[36mAssignment Load (0.4ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments"[0m
+  ↳ app/views/assignments/index.html.erb:18
+  ↳ app/views/assignments/index.html.erb:18
+  Rendered assignments/index.html.erb within layouts/application (7.0ms)
+  Rendered assignments/index.html.erb within layouts/application (6.6ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 200ms (Views: 197.2ms | ActiveRecord: 0.9ms)
+
+
+  Rendered partials/_footer.html.erb (0.2ms)
+Completed 200 OK in 359ms (Views: 356.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assignments" for 86.36.37.201 at 2019-04-01 13:48:01 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#index as HTML
+  Rendering assignments/index.html.erb within layouts/application
+  [1m[36mAssignment Load (0.3ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments"[0m
+  ↳ app/views/assignments/index.html.erb:18
+  Rendered assignments/index.html.erb within layouts/application (2.8ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 67ms (Views: 65.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assignments/new" for 86.36.37.201 at 2019-04-01 13:48:03 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#new as HTML
+  Rendering assignments/new.html.erb within layouts/application
+  Rendered assignments/_form.html.erb (354.3ms)
+  Rendered assignments/new.html.erb within layouts/application (356.0ms)
+Completed 500 Internal Server Error in 360ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x007fee822445c8>:0x007fee824ba668>):
+    35: 
+    36:   <div class="input-field">
+    37:     <%= form.label :pay_level %>
+    38:     <%= f.collection_select :pay_level, Assignment::PAYLEVEL, :to_s, :to_s, :include_blank => true %> <br />
+    39:   </div>
+    40: 
+    41: 
+  
+app/views/assignments/_form.html.erb:38:in `block in _app_views_assignments__form_html_erb__3627161653949894164_70331182232480'
+app/views/assignments/_form.html.erb:1:in `_app_views_assignments__form_html_erb__3627161653949894164_70331182232480'
+app/views/assignments/new.html.erb:3:in `_app_views_assignments_new_html_erb___2720493166950529300_70331182472140'
+Started GET "/assignments/new" for 86.36.37.201 at 2019-04-01 13:48:17 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#new as HTML
+  Rendering assignments/new.html.erb within layouts/application
+  Rendered assignments/_form.html.erb (24.5ms)
+  Rendered assignments/new.html.erb within layouts/application (26.0ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 148ms (Views: 146.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employees" for 86.36.37.201 at 2019-04-01 13:48:50 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:20
+  Rendered employees/index.html.erb within layouts/application (14.6ms)
+  Rendered partials/_footer.html.erb (0.8ms)
+Completed 200 OK in 121ms (Views: 100.1ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/assignments" for 86.36.37.201 at 2019-04-01 13:50:24 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"obHW85s6+vax9Jnvm7b/BVnwPtHHcYS2jKBqc1YHqg9j/GTa+ckmtmUa3QzRVj351ATiDfEK6w3YZq99F5JJ2Q==", "assignment"=>{"store_id"=>"1", "employee_id"=>"2", "start_date"=>"April 08, 2014", "end_date"=>"April 10, 2017", "pay_level"=>"2"}, "commit"=>"Create Assignment"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+  ↳ app/models/assignment.rb:46
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+  ↳ app/models/assignment.rb:53
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/assignment.rb:36
+  [1m[36mAssignment Load (0.2ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."employee_id" = ?[0m  [["employee_id", 2]]
+  ↳ app/models/employee.rb:38
+  [1m[36mAssignment Create (0.5ms)[0m  [1m[32mINSERT INTO "assignments" ("store_id", "employee_id", "start_date", "end_date", "pay_level", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["store_id", 1], ["employee_id", 2], ["start_date", "2014-04-08"], ["end_date", "2017-04-10"], ["pay_level", 2], ["created_at", "2019-04-01 13:50:24.041666"], ["updated_at", "2019-04-01 13:50:24.041666"]]
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[35m (56.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/assignments_controller.rb:30
+Redirected to https://newwork-ibendou.c9users.io/assignments/2
+Completed 302 Found in 93ms (ActiveRecord: 59.2ms)
+
+
+Started GET "/assignments/2" for 86.36.37.201 at 2019-04-01 13:50:24 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAssignment Load (0.5ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/assignments_controller.rb:67
+  Rendering assignments/show.html.erb within layouts/application
+  Rendered assignments/show.html.erb within layouts/application (1.8ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 129ms (Views: 124.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employees" for 86.36.37.201 at 2019-04-01 13:55:12 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:20
+  Rendered employees/index.html.erb within layouts/application (19.6ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 185ms (Views: 156.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/stores/new" for 86.36.37.201 at 2019-04-01 13:59:58 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#new as HTML
+  Rendering stores/new.html.erb within layouts/application
+  Rendered stores/_form.html.erb (7.7ms)
+  Rendered stores/new.html.erb within layouts/application (9.3ms)
+Completed 500 Internal Server Error in 142ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant Store::STATE):
+    28: 
+    29:   <div class="input-field">
+    30:     <%= form.label :state %>
+    31:     <%= form.collection_select :state, Store::STATE, :to_s, :to_s, :include_blank => true %> <br />
+    32:   </div>
+    33: 
+    34:   <div class="input-field">
+  
+app/views/stores/_form.html.erb:31:in `block in _app_views_stores__form_html_erb___1504553178868252408_70331183714600'
+app/views/stores/_form.html.erb:1:in `_app_views_stores__form_html_erb___1504553178868252408_70331183714600'
+app/views/stores/new.html.erb:3:in `_app_views_stores_new_html_erb__3177155206100259773_70331183735760'
+Started GET "/stores/new" for 86.36.37.201 at 2019-04-01 14:02:19 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#new as HTML
+  Rendering stores/new.html.erb within layouts/application
+  Rendered stores/_form.html.erb (6.2ms)
+  Rendered stores/new.html.erb within layouts/application (8.0ms)
+  Rendered partials/_footer.html.erb (0.6ms)
+Completed 200 OK in 109ms (Views: 106.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employees" for 86.36.37.201 at 2019-04-01 14:02:33 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/index.html.erb:20
+  Rendered employees/index.html.erb within layouts/application (11.8ms)
+  Rendered partials/_footer.html.erb (0.9ms)
+Completed 200 OK in 154ms (Views: 138.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/employees" for 86.36.37.201 at 2019-04-01 14:43:23 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:20
+  Rendered employees/index.html.erb within layouts/application (44.1ms)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<Employee::ActiveRecord_Relation:0x007fee78365718>):
+    39: <%= link_to 'New Employee', new_employee_path %>
+    40: 
+    41: <span class="paginate">
+    42: <%= will_paginate @employees, :previous_label => "Previous&nbsp;", :next_label => "&nbsp;Next" %>
+    43: </span>
+  
+app/views/employees/index.html.erb:42:in `_app_views_employees_index_html_erb__103148194088361907_70331097882340'
+Started GET "/employees" for 86.36.37.201 at 2019-04-01 14:44:27 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:20
+  Rendered employees/index.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<Employee::ActiveRecord_Relation:0x007fee80d54d20>):
+    39: <%= link_to 'New Employee', new_employee_path %>
+    40: 
+    41: <span class="paginate">
+    42: <%= will_paginate @employees, :previous_label => "Previous&nbsp;", :next_label => "&nbsp;Next" %>
+    43: </span>
+  
+app/views/employees/index.html.erb:42:in `_app_views_employees_index_html_erb__103148194088361907_70331170033320'
+Started GET "/employees" for 86.36.37.201 at 2019-04-01 14:44:52 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:20
+  Rendered employees/index.html.erb within layouts/application (3.4ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 78ms (Views: 75.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees" for 86.36.37.201 at 2019-04-01 14:47:10 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:20
+  Rendered employees/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 476ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `employee_active_path' for #<#<Class:0x007fee78363530>:0x007fee829fe840>
+Did you mean?  employee_path):
+    34:     <!-- Dropdown Structure -->
+    35:     <ul id="dropdown1" class="dropdown-content">
+    36:         <li><%= link_to "List Employees", employees_path %></li>
+    37:         <li><%= link_to "List Active Employees", employee_active_path %></li>
+    38:         <li><%= link_to "List Inactive Employees", employee_inactive_path %></li>
+    39:         <li><%= link_to "Add an Employee", new_employee_path %></li>
+    40:         
+  
+app/views/layouts/application.html.erb:37:in `_app_views_layouts_application_html_erb___4345698230936762875_70331185215520'
+Started GET "/employees" for 86.36.37.201 at 2019-04-01 14:51:03 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:20
+  Rendered employees/index.html.erb within layouts/application (65.2ms)
+  Rendered partials/_footer.html.erb (0.6ms)
+Completed 200 OK in 192ms (Views: 169.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/active1" for 86.36.37.201 at 2019-04-01 14:51:09 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+AbstractController::ActionNotFound (The action 'active1' could not be found for EmployeesController):
+  
+actionpack (5.2.2.1) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/active1" for 86.36.37.201 at 2019-04-01 14:52:12 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/active1"):
+  
+actionpack (5.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/active" for 86.36.37.201 at 2019-04-01 14:52:20 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#active as HTML
+  Rendering employees/active.html.erb within layouts/application
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/active.html.erb:20
+  Rendered employees/active.html.erb within layouts/application (13.2ms)
+  Rendered partials/_footer.html.erb (0.6ms)
+Completed 200 OK in 110ms (Views: 82.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/active" for 86.36.37.201 at 2019-04-01 14:58:50 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#active as HTML
+  Rendering employees/active.html.erb within layouts/application
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/active.html.erb:20
+  Rendered employees/active.html.erb within layouts/application (11.4ms)
+  Rendered partials/_footer.html.erb (0.6ms)
+Completed 200 OK in 95ms (Views: 77.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/active_" for 86.36.37.201 at 2019-04-01 14:58:59 +0000
+Cannot render console from 86.36.37.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#active as HTML
+Completed 406 Not Acceptable in 42ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionController::UnknownFormat (StoresController#active is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.2.1) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'

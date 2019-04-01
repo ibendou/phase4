@@ -1,4 +1,7 @@
 class Assignment < ApplicationRecord
+  
+  
+  PAYLEVEL = [1, 2, 3, 4, 5, 6]
 # Callbacks
   before_create :end_previous_assignment
   

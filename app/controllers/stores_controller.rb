@@ -7,6 +7,15 @@ class StoresController < ApplicationController
     @stores = Store.all
   end
 
+  def active
+    @stores = Store.active.alphabetical.paginate(:page => params[:page]).per_page(10)
+  end
+  
+  def inactive
+    @stores = Store.inactive.alphabetical.paginate(:page => params[:page]).per_page(10)
+  end
+
+
   # GET /stores/1
   # GET /stores/1.json
   def show
@@ -69,6 +78,6 @@ class StoresController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def store_params
-      params.require(:store).permit(:name, :street, :city, :state, :zip, :phone, :latitude, :longitude)
+      params.require(:store).permit(:name, :street, :city, :state, :zip, :phone, :latitude, :longitude, :active)
     end
 end

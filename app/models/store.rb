@@ -2,6 +2,7 @@ class Store < ApplicationRecord
 # Callbacks
   before_save :reformat_phone
   
+  STATES = ['PA','OH','WV']
   # Relationships
   has_many :assignments
   has_many :employees, through: :assignments  

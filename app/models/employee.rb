@@ -1,4 +1,6 @@
 class Employee < ApplicationRecord
+  
+  ROLE = ['admin', 'manager', 'employee']
  # Callbacks
   before_save :reformat_phone
   before_validation :reformat_ssn

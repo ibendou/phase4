@@ -16,27 +16,31 @@
     <%= form.number_field :store_id %>
   </div>
 
-  <div class="field">
+  <div class="input-field">
     <%= form.label :employee_id %>
     <%= form.number_field :employee_id %>
   </div>
 
-  <div class="field">
-    <%= form.label :start_date %>
-    <%= form.date_select :start_date %>
+  <div class="input-field"> 
+    <%= form.label :start_date %>'
+    <%= form.text_field :start_date, prompt: "Start Date", class: "datepicker",
+    :value => (form.object.start_date.strftime('%B %d, %Y') if form.object.start_date != nil)%>
   </div>
 
-  <div class="field">
-    <%= form.label :end_date %>
-    <%= form.date_select :end_date %>
+  <div class="input-field"> 
+    <%= form.label :end_date %>'
+    <%= form.text_field :end_date, prompt: "End Date", class: "datepicker",
+    :value => (form.object.end_date.strftime('%B %d, %Y') if form.object.end_date != nil)%>
   </div>
 
-  <div class="field">
+  <div class="input-field">
     <%= form.label :pay_level %>
-    <%= form.number_field :pay_level %>
+    <%= form.collection_select :pay_level, Assignment::PAYLEVEL, :to_s, :to_s, :include_blank => true %> <br />
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+
+  <div class="actions">  
+	  <%= form.submit :class=>"btn waves-effect waves-light" %>  
+	  <%= link_to 'Cancel', employees_path, :class => 'waves-effect waves-light btn red' %> 
+	</div>
 <% end %>

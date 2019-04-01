@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h3>Listing Employees</h3>
+<h3>Listing Inactive Employees</h3>
 
 <table class="highlight">
   <thead>
@@ -38,3 +38,6 @@
 
 <%= link_to 'New Employee', new_employee_path %>
 
+<span class="paginate">
+<%= will_paginate @employees, :previous_label => "Previous&nbsp;", :next_label => "&nbsp;Next" %>
+</span>

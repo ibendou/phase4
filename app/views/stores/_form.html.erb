@@ -28,7 +28,7 @@
 
   <div class="input-field">
     <%= form.label :state %>
-    <%= form.text_field :state %>
+    <%= form.collection_select :state, Store::STATES, :to_s, :to_s, :include_blank => true %> <br />
   </div>
 
   <div class="input-field">

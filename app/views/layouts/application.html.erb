@@ -3,7 +3,7 @@
   <head>
     <title>A&M Creamery</title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+    <%= csp_meta_tag %> 
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -34,18 +34,23 @@
     <!-- Dropdown Structure -->
     <ul id="dropdown1" class="dropdown-content">
         <li><%= link_to "List Employees", employees_path %></li>
+        <li><%= link_to "List Active Employees", employee_active_path %></li>
+        <li><%= link_to "List Inactive Employees", employee_inactive_path %></li>
         <li><%= link_to "Add an Employee", new_employee_path %></li>
+        
     </ul> 
     
        <ul id="dropdown2" class="dropdown-content">
         <li><%= link_to "List Stores", stores_path %></li>
+        <li><%= link_to "List Active Stores", store_active_path %></li>
+        <li><%= link_to "List Inactive Stores", store_inactive_path %></li>
         <li><%= link_to "Add a Store", new_store_path %></li>
     </ul> 
     <nav>
          <div class="nav-wrapper">
                 &nbsp&nbsp     
               <a href="/" class="brand-logo">A&M Creamery</a> 
- 
+  
     <ul class="right">
         <li><%= link_to "Assignments", assignments_path %></li>
 
