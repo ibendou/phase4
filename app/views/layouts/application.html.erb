@@ -36,6 +36,7 @@
         <li><%= link_to "List Employees", employees_path %></li>
         <li><%= link_to "List Active Employees", employee_active_path %></li>
         <li><%= link_to "List Inactive Employees", employee_inactive_path %></li>
+        <li class="divider" tabindex="-1"></li>
         <li><%= link_to "Add an Employee", new_employee_path %></li>
     </ul> 
     
@@ -43,6 +44,7 @@
         <li><%= link_to "List All Stores", stores_path %></li>
         <li><%= link_to "List Active Stores", store_active_path %></li>
         <li><%= link_to "List Inactive Stores", store_inactive_path %></li>
+        <li class="divider" tabindex="-1"></li>
         <li><%= link_to "Add a Store", new_store_path %></li>
     </ul> 
     
@@ -50,6 +52,7 @@
         <li><%= link_to "List All Assignments", assignments_path %></li>
         <li><%= link_to "List Current Assignments", assignment_current_path %></li>
         <li><%= link_to "List Past Assignments", assignment_past_path %></li>
+        <li class="divider" tabindex="-1"></li>
         <li><%= link_to "Add an Assignment", new_assignment_path %></li>
     </ul> 
     <nav>
@@ -72,12 +75,13 @@
   </nav>
   
   <div class="row">
-          <div class="center-align">
+    <div class="col s2"> </div>
+          <div class="col s8 card-panel teal lighten-5">
                   <!-- MAIN CONTENT GOES HERE -->      
                   <%= yield %>    
           </div> 
- 
-    <div class="center-align"> 
+    
+    <div class="align-center"> 
     </div>
      </div> 
  
