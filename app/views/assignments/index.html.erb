@@ -2,7 +2,7 @@
 
 <h2>Listing All Assignments</h2>
 
-<table>
+<table class="highlight">
   <thead>
     <tr>
       <th>Store</th>
@@ -22,14 +22,17 @@
         <td><%= assignment.start_date %></td>
         <td><%= assignment.end_date %></td>
         <td><%= assignment.pay_level %></td>
-        <td><%= link_to 'Show', assignment %></td>
-        <td><%= link_to 'Edit', edit_assignment_path(assignment) %></td>
-        <td><%= link_to 'Destroy', assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', assignment, :class=> "teal-text text-lighten-1" %></td>
+        <td><%= link_to 'Edit', edit_assignment_path(assignment), :class=> "teal-text text-lighten-1" %></td>
+        <td><%= link_to 'Destroy', assignment, method: :delete, data: { confirm: 'Are you sure?' }, :class=> "teal-text text-lighten-1" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
+<div class="col">
+    <%= link_to 'New Assignment', new_assignment_path, :class=> "btn waves-effect waves-teal" %>
+</div>
 
-<%= link_to 'New Assignment', new_assignment_path %>
+<div class="row"></div>

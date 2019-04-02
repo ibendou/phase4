@@ -26,15 +26,18 @@
         <td><%= employee.phone %></td>
         <td><%= employee.role %></td>
         <td><%= employee.active %></td>
-        <td><%= link_to 'Show', employee %></td>
-        <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
-        <td><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', employee, :class=>"teal-text text-lighten-1" %></td>
+        <td><%= link_to 'Edit', edit_employee_path(employee), :class=>"teal-text text-lighten-1" %></td>
+        <td><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"teal-text text-lighten-1" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
+<div class="col">
+    <%= link_to 'New Employee', new_employee_path, :class=> "btn waves-effect waves-teal" %>
+</div>
 
-<%= link_to 'New Employee', new_employee_path %>
+<div class="row"></div>
 
