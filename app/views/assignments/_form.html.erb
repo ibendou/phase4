@@ -13,12 +13,12 @@
 
   <div class="input-field">
     <%= form.label :store_id, :class=>"active" %>
-    <%= form.number_field :store_id %>
+    <%= form.select :store_id, Store.active.collect { |p| p.id }, include_blank: true %>
   </div>
 
   <div class="input-field">
     <%= form.label :employee_id, :class=>"active"  %>
-    <%= form.number_field :employee_id %>
+    <%= form.select :employee_id, Employee.active.collect { |p| p.id }, include_blank: true %>
   </div>
 
   <div class="input-field"> 
