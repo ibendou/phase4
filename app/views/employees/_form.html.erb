@@ -12,38 +12,38 @@
   <% end %>
 
   <div class="input-field">
-    <%= form.label :first_name %>
+    <%= form.label :first_name, :class=>"active" %>
     <%= form.text_field :first_name %>
   </div>
 
   <div class="input-field">
-    <%= form.label :last_name %>
+    <%= form.label :last_name, :class=>"active" %>
     <%= form.text_field :last_name %>
   </div>
 
   <div class="input-field">
-    <%= form.label :ssn %>
+    <%= form.label :ssn, :class=>"active" %>
     <%= form.text_field :ssn %>
   </div>
 
   <div class="input-field"> 
-    <%= form.label :date_of_birth %>'
+    <%= form.label :date_of_birth, :class=>"active" %>'
     <%= form.text_field :date_of_birth, prompt: "Date Of Birth", class: "datepicker",
     :value => (form.object.date_of_birth.strftime('%B %d, %Y') if form.object.date_of_birth != nil)%>
   </div>
 
   <div class="input-field">
-    <%= form.label :phone %>
+    <%= form.label :phone, :class=>"active" %>
     <%= form.text_field :phone %>
   </div>
 
   <div class="input-field">
-    <%= form.label :role %>
+    <%= form.label :role, :class=>"active" %>
     <%= form.collection_select :role, Employee::ROLE, :to_s, :to_s, :include_blank => true %> <br />
   </div>
 
   <div class="row">
-    <%= form.check_box :active %>
+    <%= form.check_box :active, :class=>"active"%>
     <%= form.label :active %><br />
   </div>
 

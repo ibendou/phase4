@@ -58844,3 +58844,312 @@ Processing by AssignmentsController#new as HTML
 Completed 200 OK in 95ms (Views: 93.1ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 37.210.139.183 at 2019-04-02 18:10:38 +0000
+Cannot render console from 37.210.139.183! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+  Rendered partials/_footer.html.erb (0.6ms)
+Completed 200 OK in 468ms (Views: 458.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 37.210.139.183 at 2019-04-02 18:10:57 +0000
+Cannot render console from 37.210.139.183! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 66ms (Views: 64.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/current" for 37.210.139.183 at 2019-04-02 18:11:08 +0000
+Cannot render console from 37.210.139.183! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#current as HTML
+  Rendering assignments/current.html.erb within layouts/application
+  [1m[36mAssignment Load (0.3ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."end_date" IS NULL LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/assignments/current.html.erb:18
+  Rendered assignments/current.html.erb within layouts/application (23.0ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 106ms (Views: 85.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 37.210.139.183 at 2019-04-02 18:39:14 +0000
+Cannot render console from 37.210.139.183! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+  Rendered partials/_footer.html.erb (0.9ms)
+Completed 200 OK in 113ms (Views: 108.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assignments" for 37.210.139.183 at 2019-04-02 18:39:34 +0000
+Cannot render console from 37.210.139.183! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#index as HTML
+  Rendering assignments/index.html.erb within layouts/application
+  [1m[36mAssignment Load (0.4ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments"[0m
+  ↳ app/views/assignments/index.html.erb:18
+  Rendered assignments/index.html.erb within layouts/application (6.5ms)
+  Rendered partials/_footer.html.erb (0.8ms)
+Completed 200 OK in 74ms (Views: 71.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assignments/1" for 37.210.139.183 at 2019-04-02 18:39:43 +0000
+Cannot render console from 37.210.139.183! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAssignment Load (0.9ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/assignments_controller.rb:74
+  Rendering assignments/show.html.erb within layouts/application
+  Rendered assignments/show.html.erb within layouts/application (1.4ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 83ms (Views: 77.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assignments/1/edit" for 37.210.139.183 at 2019-04-02 18:39:56 +0000
+Cannot render console from 37.210.139.183! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAssignment Load (0.3ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/assignments_controller.rb:74
+  Rendering assignments/edit.html.erb within layouts/application
+  Rendered assignments/_form.html.erb (22.9ms)
+  Rendered assignments/edit.html.erb within layouts/application (24.8ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 116ms (Views: 112.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/current" for 37.210.139.183 at 2019-04-02 18:40:31 +0000
+Cannot render console from 37.210.139.183! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#current as HTML
+  Rendering assignments/current.html.erb within layouts/application
+  [1m[36mAssignment Load (0.6ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."end_date" IS NULL LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/assignments/current.html.erb:18
+  Rendered assignments/current.html.erb within layouts/application (5.0ms)
+  Rendered partials/_footer.html.erb (0.9ms)
+Completed 200 OK in 111ms (Views: 107.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assignments/3/edit" for 37.210.139.183 at 2019-04-02 18:40:37 +0000
+Cannot render console from 37.210.139.183! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAssignment Load (0.2ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/assignments_controller.rb:74
+  Rendering assignments/edit.html.erb within layouts/application
+  Rendered assignments/_form.html.erb (4.1ms)
+  Rendered assignments/edit.html.erb within layouts/application (5.6ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 80ms (Views: 77.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assignments/3" for 37.210.139.183 at 2019-04-02 18:41:14 +0000
+Cannot render console from 37.210.139.183! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAssignment Load (0.2ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/assignments_controller.rb:74
+  Rendering assignments/show.html.erb within layouts/application
+  Rendered assignments/show.html.erb within layouts/application (1.3ms)
+  Rendered partials/_footer.html.erb (0.8ms)
+Completed 200 OK in 84ms (Views: 80.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assignments/3/edit" for 37.210.139.183 at 2019-04-02 18:41:18 +0000
+Cannot render console from 37.210.139.183! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAssignment Load (0.3ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/assignments_controller.rb:74
+  Rendering assignments/edit.html.erb within layouts/application
+  Rendered assignments/_form.html.erb (4.3ms)
+  Rendered assignments/edit.html.erb within layouts/application (5.8ms)
+  Rendered partials/_footer.html.erb (0.6ms)
+Completed 200 OK in 71ms (Views: 68.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/current" for 37.210.139.183 at 2019-04-02 18:41:32 +0000
+Cannot render console from 37.210.139.183! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#current as HTML
+  Rendering assignments/current.html.erb within layouts/application
+  [1m[36mAssignment Load (0.5ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."end_date" IS NULL LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/assignments/current.html.erb:18
+  Rendered assignments/current.html.erb within layouts/application (4.2ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 88ms (Views: 85.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assignments/3/edit" for 37.210.139.183 at 2019-04-02 18:41:36 +0000
+Cannot render console from 37.210.139.183! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAssignment Load (0.3ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/assignments_controller.rb:74
+  Rendering assignments/edit.html.erb within layouts/application
+  Rendered assignments/_form.html.erb (4.9ms)
+  Rendered assignments/edit.html.erb within layouts/application (6.6ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 71ms (Views: 67.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/past" for 37.210.139.183 at 2019-04-02 18:41:41 +0000
+Cannot render console from 37.210.139.183! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#past as HTML
+  Rendering assignments/past.html.erb within layouts/application
+  [1m[36mAssignment Load (0.4ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."end_date" IS NOT NULL LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/assignments/past.html.erb:18
+  Rendered assignments/past.html.erb within layouts/application (3.7ms)
+  Rendered partials/_footer.html.erb (2.2ms)
+Completed 200 OK in 158ms (Views: 155.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assignments/new" for 37.210.139.183 at 2019-04-02 18:41:47 +0000
+Cannot render console from 37.210.139.183! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#new as HTML
+  Rendering assignments/new.html.erb within layouts/application
+  Rendered assignments/_form.html.erb (12.5ms)
+  Rendered assignments/new.html.erb within layouts/application (15.3ms)
+  Rendered partials/_footer.html.erb (0.6ms)
+Completed 200 OK in 177ms (Views: 173.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employees" for 37.210.139.183 at 2019-04-02 18:42:04 +0000
+Cannot render console from 37.210.139.183! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:20
+  Rendered employees/index.html.erb within layouts/application (14.9ms)
+  Rendered partials/_footer.html.erb (0.6ms)
+Completed 200 OK in 123ms (Views: 101.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/employees/1/edit" for 37.210.139.183 at 2019-04-02 18:42:08 +0000
+Cannot render console from 37.210.139.183! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:75
+  Rendering employees/edit.html.erb within layouts/application
+  Rendered employees/_form.html.erb (7.0ms)
+  Rendered employees/edit.html.erb within layouts/application (9.7ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 87ms (Views: 82.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees/new" for 37.210.139.183 at 2019-04-02 18:42:13 +0000
+Cannot render console from 37.210.139.183! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#new as HTML
+  Rendering employees/new.html.erb within layouts/application
+  Rendered employees/_form.html.erb (5.1ms)
+  Rendered employees/new.html.erb within layouts/application (6.8ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 87ms (Views: 84.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/active" for 37.210.139.183 at 2019-04-02 18:42:16 +0000
+Cannot render console from 37.210.139.183! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#active as HTML
+  Rendering employees/active.html.erb within layouts/application
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/active.html.erb:20
+  Rendered employees/active.html.erb within layouts/application (3.9ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 71ms (Views: 67.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/inactive" for 37.210.139.183 at 2019-04-02 18:42:20 +0000
+Cannot render console from 37.210.139.183! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#inactive as HTML
+  Rendering employees/inactive.html.erb within layouts/application
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 0], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/employees/inactive.html.erb:20
+  Rendered employees/inactive.html.erb within layouts/application (2.9ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 80ms (Views: 77.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/active_" for 37.210.139.183 at 2019-04-02 18:42:28 +0000
+Cannot render console from 37.210.139.183! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#active as HTML
+  Rendering stores/active.html.erb within layouts/application
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/stores/active.html.erb:22
+  Rendered stores/active.html.erb within layouts/application (12.9ms)
+  Rendered partials/_footer.html.erb (0.8ms)
+Completed 200 OK in 112ms (Views: 95.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/stores/3/edit" for 37.210.139.183 at 2019-04-02 18:42:33 +0000
+Cannot render console from 37.210.139.183! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStore Load (0.5ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/stores_controller.rb:76
+  Rendering stores/edit.html.erb within layouts/application
+  Rendered stores/_form.html.erb (6.3ms)
+  Rendered stores/edit.html.erb within layouts/application (8.4ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 200ms (Views: 195.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assignments" for 37.210.139.183 at 2019-04-02 18:49:57 +0000
+Cannot render console from 37.210.139.183! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#index as HTML
+  Rendering assignments/index.html.erb within layouts/application
+  [1m[36mAssignment Load (0.3ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments"[0m
+  ↳ app/views/assignments/index.html.erb:18
+  Rendered assignments/index.html.erb within layouts/application (5.8ms)
+  Rendered partials/_footer.html.erb (0.7ms)
+Completed 200 OK in 77ms (Views: 73.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assignments/1/edit" for 37.210.139.183 at 2019-04-02 18:50:02 +0000
+Cannot render console from 37.210.139.183! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAssignment Load (0.4ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/assignments_controller.rb:74
+  Rendering assignments/edit.html.erb within layouts/application
+  Rendered assignments/_form.html.erb (1.7ms)
+  Rendered assignments/edit.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/home/ubuntu/workspace/phase3/app/views/assignments/_form.html.erb:15: syntax error, unexpected '='
+( form.label :store_id, class="active" );@output_buffer.safe
+                              ^
+/home/ubuntu/workspace/phase3/app/views/assignments/_form.html.erb:20: syntax error, unexpected '='
+orm.label :employee_id, class="active"  );@output_buffer.saf
+                              ^
+/home/ubuntu/workspace/phase3/app/views/assignments/_form.html.erb:25: syntax error, unexpected '='
+form.label :start_date, class="active"  );@output_buffer.saf
+                              ^
+/home/ubuntu/workspace/phase3/app/views/assignments/_form.html.erb:31: syntax error, unexpected '='
+( form.label :end_date, class="active"  );@output_buffer.saf
+                              ^
+/home/ubuntu/workspace/phase3/app/views/assignments/_form.html.erb:37: syntax error, unexpected '='
+ form.label :pay_level, class="active"  );@output_buffer.saf
+                              ^):
+  
+app/views/assignments/_form.html.erb:15: syntax error, unexpected '='
+app/views/assignments/_form.html.erb:20: syntax error, unexpected '='
+app/views/assignments/_form.html.erb:25: syntax error, unexpected '='
+app/views/assignments/_form.html.erb:31: syntax error, unexpected '='
+app/views/assignments/_form.html.erb:37: syntax error, unexpected '='
+app/views/assignments/edit.html.erb:3:in `_app_views_assignments_edit_html_erb__3296479274819809646_70199910744340'
+Started GET "/assignments/1/edit" for 37.210.139.183 at 2019-04-02 18:50:47 +0000
+Cannot render console from 37.210.139.183! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAssignment Load (0.2ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/assignments_controller.rb:74
+  Rendering assignments/edit.html.erb within layouts/application
+  Rendered assignments/_form.html.erb (4.9ms)
+  Rendered assignments/edit.html.erb within layouts/application (6.6ms)
+  Rendered partials/_footer.html.erb (0.8ms)
+Completed 200 OK in 75ms (Views: 72.4ms | ActiveRecord: 0.2ms)
+
+

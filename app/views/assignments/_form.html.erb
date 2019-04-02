@@ -12,29 +12,29 @@
   <% end %>
 
   <div class="input-field">
-    <%= form.label :store_id %>
+    <%= form.label :store_id, :class=>"active" %>
     <%= form.number_field :store_id %>
   </div>
 
   <div class="input-field">
-    <%= form.label :employee_id %>
+    <%= form.label :employee_id, :class=>"active"  %>
     <%= form.number_field :employee_id %>
   </div>
 
   <div class="input-field"> 
-    <%= form.label :start_date %>'
+    <%= form.label :start_date, :class=>"active"  %>'
     <%= form.text_field :start_date, prompt: "Start Date", class: "datepicker",
     :value => (form.object.start_date.strftime('%B %d, %Y') if form.object.start_date != nil)%>
   </div>
 
   <div class="input-field"> 
-    <%= form.label :end_date %>'
+    <%= form.label :end_date, :class=>"active"  %>'
     <%= form.text_field :end_date, prompt: "End Date", class: "datepicker",
     :value => (form.object.end_date.strftime('%B %d, %Y') if form.object.end_date != nil)%>
   </div>
 
   <div class="input-field">
-    <%= form.label :pay_level %>
+    <%= form.label :pay_level, :class=>"active"  %>
     <%= form.collection_select :pay_level, Assignment::PAYLEVEL, :to_s, :to_s, :include_blank => true %> <br />
   </div>
 

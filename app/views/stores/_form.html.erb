@@ -12,47 +12,47 @@
   <% end %>
 
   <div class="input-field">
-    <%= form.label :name %>
+    <%= form.label :name, :class=>"active" %>
     <%= form.text_field :name %>
   </div>
 
   <div class="input-field">
-    <%= form.label :street %>
+    <%= form.label :street, :class=>"active" %>
     <%= form.text_field :street %>
   </div>
 
   <div class="input-field">
-    <%= form.label :city %>
+    <%= form.label :city, :class=>"active" %>
     <%= form.text_field :city %>
   </div>
 
   <div class="input-field">
-    <%= form.label :state %>
+    <%= form.label :state, :class=>"active" %>
     <%= form.collection_select :state, Store::STATES, :to_s, :to_s, :include_blank => true %> <br />
   </div>
 
   <div class="input-field">
-    <%= form.label :zip %>
+    <%= form.label :zip, :class=>"active" %>
     <%= form.text_field :zip %>
   </div>
 
   <div class="input-field">
-    <%= form.label :phone %>
+    <%= form.label :phone, :class=>"active" %>
     <%= form.text_field :phone %>
   </div>
 
   <div class="input-field">
-    <%= form.label :latitude %>
+    <%= form.label :latitude, :class=>"active" %>
     <%= form.text_field :latitude %>
   </div>
 
   <div class="input-field">
-    <%= form.label :longitude %>
+    <%= form.label :longitude, :class=>"active" %>
     <%= form.text_field :longitude %>
   </div>
 
   <div class="row">
-    <%= form.check_box :active %>
+    <%= form.check_box :active, :class=>"active" %>
     <%= form.label :active %><br />
   </div>
   
