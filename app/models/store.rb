@@ -27,7 +27,7 @@ class Store < ApplicationRecord
   
   # Misc Constants
   STATES_LIST = [['Ohio', 'OH'],['Pennsylvania', 'PA'],['West Virginia', 'WV']]
-  
+
   
   # Callback code
   # -----------------------------
