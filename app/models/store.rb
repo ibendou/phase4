@@ -23,14 +23,11 @@ class Store < ApplicationRecord
   scope :alphabetical, -> { order('name') }
   scope :active,       -> { where(active: true) }
   scope :inactive,     -> { where(active: false) }
-  
-  
+
   # Misc Constants
   STATES_LIST = [['Ohio', 'OH'],['Pennsylvania', 'PA'],['West Virginia', 'WV']]
   
-  def name
-    name
-  end
+
   
   # Callback code
   # -----------------------------

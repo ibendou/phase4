@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :jobs
+  resources :shift_jobs
+  resources :shifts
+  resources :store_flavors
+  resources :falvors
   get 'welcome/index'
   resources :assignments
   resources :stores

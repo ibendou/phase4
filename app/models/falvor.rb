@@ -1,0 +1,2 @@
+class Falvor < ApplicationRecord
+end

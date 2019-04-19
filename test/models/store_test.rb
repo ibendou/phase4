@@ -78,6 +78,10 @@ class StoreTest < ActiveSupport::TestCase
       assert_equal ["CMU", "Oakland"], Store.active.alphabetical.map{|s| s.name}
     end
     
+    should "shows name" do
+      assert_equal "CMU", @CMU.name
+    end  
+    
     # test the scope 'inactive'
     should "shows that there is one inactive store" do
       assert_equal 1, Store.inactive.size
