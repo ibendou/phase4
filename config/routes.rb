@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
+  
+  get 'welcome/index'
   resources :jobs
   resources :shift_jobs
   resources :shifts
   resources :store_flavors
-  resources :falvors
-  get 'welcome/index'
+  resources :flavors
   resources :assignments
   resources :stores
   resources :employees
@@ -17,4 +18,7 @@ Rails.application.routes.draw do
   
   get "current", to: "assignments#current", as: :assignment_current
   get "past", to: "assignments#past", as: :assignment_past
+  
+  get "active1", to: "flavors#active", as: :flavor_active
+  get "inactive1", to: "flavors#inactive", as: :flavor_inactive
 end

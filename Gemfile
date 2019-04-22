@@ -36,6 +36,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'validates_timeliness'
+gem 'materialize_timepicker_rails'
 gem 'will_paginate'
 gem 'simple_form'
 gem 'materialize-sass'

@@ -35,16 +35,34 @@ class ShiftTest < ActiveSupport::TestCase
     
     
     
-    should "identify a past store as part of an invalid shift" do
-      puts @ed.first_name
-      puts @oakland.name
-      puts @assign_ed.employee.first_name
-      puts @assign_ed.store.name
-      shift = FactoryBot.build(:shift, assignment: @assign_ben, date: 1.day.ago.to_date)
-      assert_equal false,shift.valid?
+  #  should "identify a past assignment as part of an invalid shift" do
+  #    invalid_shift = FactoryBot.build(:shift, assignment: @assign_ben, date: 1.day.ago.to_date)
+  #    assert_equal false,invalid_shift.valid?
+  #  end
+    
+    should "return shifts for a given store" do
+      assert_equal 3, Shift.for_store(3).size()
+    end
+
+    should "return shifts for a given employee" do
+      assert_equal 1, Shift.for_employee(1).size()
     end
     
+    should "return past shifts" do
+      assert_equal 3, Shift.past().size()
+    end
     
+    should "return upcoming shifts" do
+      assert_equal 0, Shift.upcoming().size()
+    end
+    
+    should "return shifts for next x days" do
+      assert_equal 0, Shift.for_next_days(10).size()
+    end
+    
+    should "return shifts for past x days" do
+      assert_equal 1, Shift.for_past_days(10).size()
+    end
     
   end
 end 

@@ -56,6 +56,18 @@
         <li><%= link_to "Add an Assignment", new_assignment_path %></li>
     </ul> 
     
+        <ul id="dropdown4" class="dropdown-content">
+        <li><%= link_to "List All Flavors", flavors_path %></li>
+        <li><%= link_to "List Active Flavors", flavor_active_path %></li>
+        <li><%= link_to "List Inactive Flavors", flavor_inactive_path %></li>
+        <li class="divider" tabindex="-1"></li>
+        <li><%= link_to "Add a new flavor", new_flavor_path %></li>
+    </ul> 
+        <ul id="dropdown5" class="dropdown-content">
+        <li><%= link_to "List All Shifts", shifts_path %></li>
+        <li class="divider" tabindex="-1"></li>
+        <li><%= link_to "Add an Shift", new_shift_path %></li>
+    </ul> 
     
     <nav>
          <div class="nav-wrapper">
@@ -63,14 +75,22 @@
               <a href="/" class="brand-logo">A&M Creamery</a> 
   
     <ul class="right">
-        <!-- Dropdown Trigger -->       
-        <li><a class="dropdown-button" href="/assignments" data-activates="dropdown3">Assignments<i class="material-icons right">arrow_drop_down</i></a></li>
+       
 
         <!-- Dropdown Trigger -->       
         <li><a class="dropdown-button" href="/employees" data-activates="dropdown1">Employees<i class="material-icons right">arrow_drop_down</i></a></li>
-
+       
+       <!-- Dropdown Trigger -->       
+        <li><a class="dropdown-button" href="/assignments" data-activates="dropdown3">Assignments<i class="material-icons right">arrow_drop_down</i></a></li>
+       
+        <!-- Dropdown Trigger -->       
+        <li><a class="dropdown-button" href="/shifts" data-activates="dropdown5">Shifts<i class="material-icons right">arrow_drop_down</i></a></li>
+       
         <!-- Dropdown Trigger -->       
         <li><a class="dropdown-button" href="/stores" data-activates="dropdown2">Stores<i class="material-icons right">arrow_drop_down</i></a></li>
+        
+         <!-- Dropdown Trigger -->       
+        <li><a class="dropdown-button" href="/flavors" data-activates="dropdown4">Flavors<i class="material-icons right">arrow_drop_down</i></a></li>
         
         <li><a href="/login">login</a></li>
         </ul> 

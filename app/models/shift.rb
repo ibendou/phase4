@@ -12,8 +12,8 @@ class Shift < ApplicationRecord
     
     scope :completed, ->{}
     scope :incompleted, ->{}
-    scope :for_store,     ->(store_id) { where("store_id = ?", store_id) }
-    scope :for_employee,  ->(employee_id) { where("employee_id = ?", employee_id) }
+    scope :for_store,     ->(store_id) {joins(:assignment). where("store_id = ?", store_id) }
+    scope :for_employee,  ->(employee_id) { joins(:assignment).where("employee_id = ?", employee_id) }
     scope :past, -> {where("date < ?", Date.current)}
     scope :upcoming, -> {where("date >= ?", Date.current)}
     scope :for_next_days, ->(x) {where("date >= ? and date <= ? ", Date.current, x.days.from_now)}
@@ -32,11 +32,16 @@ class Shift < ApplicationRecord
     end
 
     private
+    
     def should_only_be_added_to_current_assignments
         all_current_assignments = Assignment.current.all.map{|a| a.id}
         unless all_current_assignments.include?(self.assignment_id)
          errors.add(:assignment_id, "is not a current assignment")
         end
     end
+    
+   
+    
+    
     
 end

@@ -36,11 +36,25 @@
     <%= form.label :phone, :class=>"active" %>
     <%= form.text_field :phone %>
   </div>
+  
+  <%= form.fields_for :user do |field|%>
+    <div class="input-field">
+    <%= field.label "Email", :class=>"active" %>
+    <%= field.text_field :email %>
+    </div>
+    
+    <div class="input-field">
+    <%= field.label "Password",  :class=>"active" %>
+    <%= field.password_field :password_digest %>
+   </div>
+  <% end %>
 
   <div class="input-field">
     <%= form.label :role, :class=>"active" %>
     <%= form.collection_select :role, Employee::ROLE, :to_s, :to_s, :include_blank => true %> <br />
   </div>
+  
+
 
   <div class="row">
     <%= form.check_box :active, :class=>"active"%>

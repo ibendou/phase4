@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h3>Listing Inactive Flavors</h3>
+
+<table class="highlight">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Active</th>
+      <th colspan="3"><Options></Options></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @flavors.each do |flavor| %>
+      <tr>
+        <td><%= flavor.name %></td>
+        <td><%= flavor.active %></td>
+        <td><%= link_to 'Show', flavor, :class=> "teal-text text-lighten-1" %></td>
+        <td><%= link_to 'Edit', edit_flavor_path(flavor), :class=> "teal-text text-lighten-1" %></td>
+        <td><%= link_to 'Destroy', flavor, method: :delete, data: { confirm: 'Are you sure?' }, :class=> "teal-text text-lighten-1" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<div class="col">
+    <%= link_to 'New Flavor', new_flavor_path, :class=> "btn waves-effect waves-teal" %>
+</div>
+
+<div class="row"></div>

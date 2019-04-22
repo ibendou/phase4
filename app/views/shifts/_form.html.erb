@@ -11,19 +11,20 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :assignment_id %>
-    <%= form.number_field :assignment_id %>
+  <div class="input-field">
+    <%= form.label :assignment_id, :class=>"active" %>
+    <%= form.select :assignment_id, Assignment.current.collect { |p| [p.id] }, include_blank: true %>
+  </div>
+
+  <div class="input-field"> 
+    <%= form.label :date, :class=>"active"  %>'
+    <%= form.text_field :date, prompt: " Date", class: "datepicker",
+    :value => (form.object.date.strftime('%B %d, %Y') if form.object.date != nil)%>
   </div>
 
   <div class="field">
-    <%= form.label :date %>
-    <%= form.date_select :date %>
-  </div>
-
-  <div class="field">
-    <%= form.label :start_time %>
-    <%= form.time_select :start_time %>
+    <%= form.label :start_time, :class=>"active" %>
+    <%= form.text_field :start_time, prompt: "Start Time", class: "timepicker"%>
   </div>
 
   <div class="field">

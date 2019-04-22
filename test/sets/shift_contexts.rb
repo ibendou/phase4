@@ -4,7 +4,7 @@ module Contexts
     def create_shifts
       @shift_ed = FactoryBot.create(:shift, assignment: @assign_ed, date: 1.year.ago.to_date) # ended a month ago
       @shift_ben = FactoryBot.create(:shift, assignment: @assign_ben, date: 1.year.ago.to_date)
-     # @shift_cindy = FactoryBot.create(:shift, assignment: @assign_cindy)
+      @shift_cindy = FactoryBot.create(:shift, assignment: @assign_cindy)
     end
     
     def remove_shifts

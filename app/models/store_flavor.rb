@@ -1,5 +1,5 @@
 class StoreFlavor < ApplicationRecord
-      has_many :falvor
-      has_many :store
+      belongs_to :falvors
+      has_many :stores
       
 end
