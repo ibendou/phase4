@@ -1,14 +1,11 @@
 class Employee < ApplicationRecord
-  
-  ROLE = ['admin', 'manager', 'employee']
- # Callbacks
+# Callbacks
   before_save :reformat_phone
   before_validation :reformat_ssn
   
   # Relationships
   has_many :assignments
   has_many :stores, through: :assignments
-  has_one :user
   
   # Validations
   validates_presence_of :first_name, :last_name, :date_of_birth, :ssn, :role
@@ -17,7 +14,6 @@ class Employee < ApplicationRecord
   validates_format_of :ssn, with: /\A\d{3}[- ]?\d{2}[- ]?\d{4}\z/, message: "should be 9 digits and delimited with dashes only"
   validates_inclusion_of :role, in: %w[admin manager employee], message: "is not an option"
   validates_uniqueness_of :ssn
-  accepts_nested_attributes_for :user
   
   # Scopes
   scope :younger_than_18, -> { where('date_of_birth > ?', 18.years.ago.to_date) }
@@ -72,4 +68,3 @@ class Employee < ApplicationRecord
      self.ssn = ssn           # reset self.ssn to new string
    end
 end
-

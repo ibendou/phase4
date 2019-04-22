@@ -28,4 +28,41 @@ FactoryBot.define do
     pay_level {1}
   end
 
+  factory :user do
+    association :employee
+    email {"egruberman@gmail.com"}
+    password_digest {"password"}
+  end
+  
+  factory :shift do
+    association :assignment
+    date { 2.days.ago.to_date }
+    start_time { 2.days.ago.to_date.change(hours:13,minutes:0,seconds:0) }
+    end_time{ 2.days.ago.to_date.change(hours:16,minutes:0,seconds:0) }
+    notes { "some notes about this shift" }
+  end
+  
+  factory :flavor do
+    name {"Vanilla"}
+    active { true }
+  end
+  
+
+  factory :store_flavor do
+    store_id {1}
+    flavor_id {1}
+  end
+
+  factory :job do
+    name {"making icecream"}
+    description { "The empoyee makes icecream using the secret recipe" }
+    active { true }
+  end
+
+
+  factory :shift_job do
+    job_id {1}
+    shift_id {1}
+  end
+
 end
