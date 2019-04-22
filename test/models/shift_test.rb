@@ -27,10 +27,10 @@ class ShiftTest < ActiveSupport::TestCase
     end
 
     teardown do
-      remove_shifts
-      remove_assignments
-      remove_employees
-      remove_stores
+      #remove_shifts
+      #remove_assignments
+      #remove_employees
+      #remove_stores
     end
     
     
