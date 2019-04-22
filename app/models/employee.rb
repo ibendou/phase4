@@ -1,12 +1,16 @@
 class Employee < ApplicationRecord
-# Callbacks
+  
+  ROLE = ['admin', 'manager', 'employee']
+  
+  accepts_nested_attributes_for :user
+ # Callbacks
   before_save :reformat_phone
   before_validation :reformat_ssn
   
   # Relationships
   has_many :assignments
   has_many :stores, through: :assignments
-  
+  has_one :user
   # Validations
   validates_presence_of :first_name, :last_name, :date_of_birth, :ssn, :role
   validates_date :date_of_birth, on_or_before: lambda { 14.years.ago }, on_or_before_message: "must be at least 14 years old"
@@ -68,3 +72,4 @@ class Employee < ApplicationRecord
      self.ssn = ssn           # reset self.ssn to new string
    end
 end
+

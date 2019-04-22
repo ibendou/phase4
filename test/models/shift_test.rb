@@ -40,9 +40,8 @@ class ShiftTest < ActiveSupport::TestCase
       puts @oakland.name
       puts @assign_ed.employee.first_name
       puts @assign_ed.store.name
-      puts @shift_ed.employee.first_name
-    ##  shift = FactoryBot.build(:shift, assignment: @assign_ben, start_date: 1.day.ago.to_date, end_date: nil)
-    ##  assert_equal false,shift.valid?
+      shift = FactoryBot.build(:shift, assignment: @assign_ben, date: 1.day.ago.to_date)
+      assert_equal false,shift.valid?
     end
     
     
