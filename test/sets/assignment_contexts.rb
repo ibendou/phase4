@@ -10,9 +10,9 @@ module Contexts
     end
     
     def remove_assignments
-      @assign_ed.destroy
+    #  @assign_ed.destroy
     #  @assign_cindy.destroy
-      @assign_ben.destroy
+   #   @assign_ben.destroy
     #  @promote_ben.destroy
     #  @assign_kathryn.destroy
     end

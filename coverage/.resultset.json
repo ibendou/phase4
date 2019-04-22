@@ -112,10 +112,6 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/phase4/app/models/shift_job.rb": [
-        1,
-        null
-      ],
       "/home/ubuntu/workspace/phase4/app/models/store.rb": [
         1,
         null,
@@ -236,6 +232,10 @@
         0,
         null,
         null,
+        null
+      ],
+      "/home/ubuntu/workspace/phase4/app/models/shift_job.rb": [
+        1,
         null
       ],
       "/home/ubuntu/workspace/phase4/app/helpers/welcome_helper.rb": [
@@ -1008,6 +1008,6 @@
         0
       ]
     },
-    "timestamp": 1555921308
+    "timestamp": 1555921629
   }
 }
