@@ -25,5 +25,7 @@
   <%= @shift.notes %>
 </p>
 
-<%= link_to 'Edit', edit_shift_path(@shift) %> |
-<%= link_to 'Back', shifts_path %>
+<div class="row"></div>
+<div class="col s3"><%= link_to 'Back', shifts_path, :class=>"teal-text text-lighten-1" %>&nbsp;&nbsp;&nbsp;&nbsp;
+<%= link_to 'Edit', edit_shift_path(@shift), :class=>"teal-text text-lighten-1" %></div>
+<div class="row"></div>

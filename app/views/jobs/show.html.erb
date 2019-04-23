@@ -15,5 +15,7 @@
   <%= @job.active %>
 </p>
 
-<%= link_to 'Edit', edit_job_path(@job) %> |
-<%= link_to 'Back', jobs_path %>
+<div class="row"></div>
+<div class="col s3"><%= link_to 'Back', jobs_path, :class=>"teal-text text-lighten-1" %>&nbsp;&nbsp;&nbsp;&nbsp;
+<%= link_to 'Edit', edit_job_path(@job), :class=>"teal-text text-lighten-1" %></div>
+<div class="row"></div>

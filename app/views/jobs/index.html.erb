@@ -18,14 +18,17 @@
         <td><%= job.name %></td>
         <td><%= job.description %></td>
         <td><%= job.active %></td>
-        <td><%= link_to 'Show', job %></td>
-        <td><%= link_to 'Edit', edit_job_path(job) %></td>
-        <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', job, :class=> "teal-text text-lighten-1" %></td>
+        <td><%= link_to 'Edit', edit_job_path(job), :class=> "teal-text text-lighten-1" %></td>
+        <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' }, :class=> "teal-text text-lighten-1" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
+<div class="col">
+    <%= link_to 'New Job', new_job_path, :class=> "btn waves-effect waves-teal" %>
+</div>
 
-<%= link_to 'New Job', new_job_path %>
+<div class="row"></div>

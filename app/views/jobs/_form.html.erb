@@ -11,22 +11,23 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
+  <div class="input-field">
+    <%= form.label :name, :class=>"active" %>
     <%= form.text_field :name %>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
+  <div class="input-field">
+    <%= form.label :description, :class=>"active" %>
     <%= form.text_field :description %>
   </div>
 
-  <div class="field">
-    <%= form.label :active %>
-    <%= form.check_box :active %>
+  <div class="row">
+    <%= form.check_box :active, :class=>"active"%>
+    <%= form.label :active %><br />
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+   <div class="actions">  
+	  <%= form.submit :class=>"btn waves-effect waves-light" %>  
+	  <%= link_to 'Cancel', employees_path, :class => 'waves-effect waves-light btn red' %> 
+	</div>
 <% end %>

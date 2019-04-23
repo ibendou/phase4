@@ -14,10 +14,11 @@
 //= require jquery
 //= require materialize-sprockets
 //= require_tree .
+
 $( document ).ready(function () { 
     $('.dropdown-button').dropdown(); 
     $('select').material_select();
-    $('.timepicker').timepicker();
+
     $('.datepicker').pickadate({
         format: 'mmmm dd, yyyy',
         formatSubmit: 'mmmm dd, yyyy',

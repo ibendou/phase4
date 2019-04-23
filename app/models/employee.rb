@@ -72,5 +72,23 @@ class Employee < ApplicationRecord
      ssn.gsub!(/[^0-9]/,"")   # strip all non-digits
      self.ssn = ssn           # reset self.ssn to new string
    end
+   
+  def attempt_make_inactive
+    make_inactive unless self.destroyed?
+  end
+
+  def make_inactive
+    self.active = 0
+    self.assignments.current.first.update_attribute(:end_date, Date.today) unless self.assignments.current.first == nil
+    self.save
+  end
+
+  def check_association
+    if self.shifts.size == 0
+      self.assignments.current.first.delete unless self.assignments.current.first == nil
+    else
+      return false
+    end
+  end
 end
 

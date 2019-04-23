@@ -7,8 +7,9 @@
 
 <p>
   <strong>Flavor:</strong>
-  <%= @store_flavor.flavor_id %>
+    <%= @store_flavor.flavor_id %>
 </p>
-
-<%= link_to 'Edit', edit_store_flavor_path(@store_flavor) %> |
-<%= link_to 'Back', store_flavors_path %>
+<div class="row"></div>
+<div class="col s3"><%= link_to 'Back', store_flavors_path, :class=>"teal-text text-lighten-1" %>&nbsp;&nbsp;&nbsp;&nbsp;
+<%= link_to 'Edit', edit_store_flavor_path(@store_flavor), :class=>"teal-text text-lighten-1" %></div>
+<div class="row"></div>

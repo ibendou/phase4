@@ -1,13 +1,16 @@
 require 'test_helper'
 
 class ShiftTest < ActiveSupport::TestCase
+    should have_many(:shift_jobs)
+    should have_many(:jobs).through(:shift_jobs)
     should belong_to(:assignment)
-    should have_many (:shift_jobs)
+    should have_one(:store).through(:assignment)
+    should have_one(:employee).through(:assignment)
     
     should validate_presence_of(:date)
     should validate_presence_of(:start_time)
-    should validate_presence_of(:end_time)
-    should validate_presence_of(:notes)
+    should validate_presence_of(:assignment_id)
+    
     
     should allow_value(7.weeks.ago.to_date).for(:date)
     should allow_value(2.years.ago.to_date).for(:date)
@@ -64,5 +67,14 @@ class ShiftTest < ActiveSupport::TestCase
       assert_equal 1, Shift.for_past_days(10).size()
     end
     
+    should "return shifts by store" do
+      assert_equal ["CMU","CMU","CMU"], Shift.by_store().map{|a| a.assignment.store.name}
+    end
+   
+    should "return shifts by employee" do
+      assert_equal ["Crawford, Cindy", "Gruberman, Ed", "Sisko, Ben"], Shift.by_employee().map{|a| a.assignment.employee.name}
+    end
+   
+   
   end
 end 

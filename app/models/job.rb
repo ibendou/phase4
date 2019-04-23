@@ -1,6 +1,6 @@
 class Job < ApplicationRecord
 
-  belongs_to(:shift)
+  has_many(:shift_jobs)
 
   # make sure required fields are present
   validates_presence_of :name

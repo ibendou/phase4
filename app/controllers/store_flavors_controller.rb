@@ -25,7 +25,8 @@ class StoreFlavorsController < ApplicationController
   # POST /store_flavors.json
   def create
     @store_flavor = StoreFlavor.new(store_flavor_params)
-
+    puts store_flavor_params
+    logger.debug store_flavor_params
     respond_to do |format|
       if @store_flavor.save
         format.html { redirect_to @store_flavor, notice: 'Store flavor was successfully created.' }

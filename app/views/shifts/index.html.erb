@@ -22,14 +22,17 @@
         <td><%= shift.start_time %></td>
         <td><%= shift.end_time %></td>
         <td><%= shift.notes %></td>
-        <td><%= link_to 'Show', shift %></td>
-        <td><%= link_to 'Edit', edit_shift_path(shift) %></td>
-        <td><%= link_to 'Destroy', shift, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', shift, :class=> "teal-text text-lighten-1" %></td>
+        <td><%= link_to 'Edit', edit_shift_path(shift), :class=> "teal-text text-lighten-1" %></td>
+        <td><%= link_to 'Destroy', shift, method: :delete, data: { confirm: 'Are you sure?' }, :class=> "teal-text text-lighten-1" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
+<div class="col">
+    <%= link_to 'New Shift', new_shift_path, :class=> "btn waves-effect waves-teal" %>
+</div>
 
-<%= link_to 'New Shift', new_shift_path %>
+<div class="row"></div>

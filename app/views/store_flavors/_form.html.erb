@@ -11,17 +11,19 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :store_id %>
-    <%= form.number_field :store_id %>
+  <div class="input-field">
+    <%= form.label :store_id, :class=>"active" %>
+    <%= form.number_field :store_id%>
   </div>
 
-  <div class="field">
-    <%= form.label :flavor_id %>
+  <div class="input-field">
+    <%= form.label :flavor_id, :class=>"active" %>
     <%= form.number_field :flavor_id %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <div class="actions">  
+	  <%= form.submit :class=>"btn waves-effect waves-light" %>  
+	  <%= link_to 'Cancel', store_flavors_path, :class => 'waves-effect waves-light btn red' %> 
+	</div>
+	
 <% end %>
