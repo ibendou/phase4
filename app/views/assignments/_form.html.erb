@@ -13,12 +13,16 @@
 
   <div class="input-field">
     <%= form.label :store_id, :class=>"active" %>
-    <%= form.select :store_id, Store.active.collect { |p| [p.id, p.name] }, include_blank: true %>
+    
+    <%= form.select(:store_id, options_for_select(Store.active.map { |p| [ p.name, p.id] }, selected: assignment.store_id), prompt: "Please Select") %>
+    
   </div>
 
   <div class="input-field">
     <%= form.label :employee_id, :class=>"active"  %>
-    <%= form.select :employee_id, Employee.active.collect { |p|[p. id, p.proper_name]  }, include_blank: true %>
+
+    <%= form.select(:employee_id, options_for_select(Employee.active.map { |p| [ p.proper_name, p.id] }, selected: assignment.employee_id), prompt: "Please Select") %>
+    
   </div>
 
   <div class="input-field"> 
