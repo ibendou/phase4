@@ -1,12 +1,16 @@
 require 'test_helper'
 
 class ShiftTest < ActiveSupport::TestCase
-    should belong_to(:shift_jobs)
+    should have_many(:shift_jobs)
+    should have_many(:jobs).through(:shift_jobs)
+    should belong_to(:assignment)
+    should have_one(:store).through(:assignment)
+    should have_one(:employee).through(:assignment)
     
     should validate_presence_of(:date)
     should validate_presence_of(:start_time)
-    should validate_presence_of(:end_time)
-    should validate_presence_of(:notes)
+    should validate_presence_of(:assignment_id)
+    
     
     should allow_value(7.weeks.ago.to_date).for(:date)
     should allow_value(2.years.ago.to_date).for(:date)
@@ -26,18 +30,14 @@ class ShiftTest < ActiveSupport::TestCase
     end
 
     teardown do
-      #remove_shifts
-      #remove_assignments
-      #remove_employees
-      #remove_stores
+      remove_shifts
+      remove_assignments
+      remove_employees
+      remove_stores
     end
     
     
-    
-  #  should "identify a past assignment as part of an invalid shift" do
-  #    invalid_shift = FactoryBot.build(:shift, assignment: @assign_ben, date: 1.day.ago.to_date)
-  #    assert_equal false,invalid_shift.valid?
-  #  end
+
     
     should "return shifts for a given store" do
       assert_equal 3, Shift.for_store(3).size()
@@ -71,6 +71,23 @@ class ShiftTest < ActiveSupport::TestCase
       assert_equal ["Crawford, Cindy", "Gruberman, Ed", "Sisko, Ben"], Shift.by_employee().map{|a| a.assignment.employee.name}
     end
    
+   should "Check if completed? works" do
+      @past_shift = FactoryBot.create(:shift)
+      @past_shift.update_attribute(:date, Date.current-5)
+      assert !@past_shift.completed?
+      @past_shift.destroy
+    end
+    
+    should "Check if start_now works" do
+      @another_shift = FactoryGirl.create(:shift, start_time: Date.current + 2.hours)
+      @another_shift.start_now
+      assert_in_delta 1, Time.now.to_i, @another_shift.start_time.to_i
+      @another_shift.destroy
+    end
+   
+    should "return shifts of employee of a manager with assignments in the same stores" do
+      assert_equal ["CMU","CMU","CMU"], Shift.for_manager("3").map{|a| a.assignment.store.name}
+    end
    
   end
 end 

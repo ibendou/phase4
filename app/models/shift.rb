@@ -14,7 +14,7 @@ class Shift < ApplicationRecord
     validates_presence_of(:date)
     validates_presence_of(:assignment_id)
     validates_presence_of(:start_time)
-    validate :should_only_be_added_to_current_assignments, on: :create
+    validate :assignment_is_active_in_system, on: :create
     validates_date :date, on_or_before: lambda { Date.current }, on_or_before_message: "cannot be in the future"
     validates_datetime :end_time, :after => :start_time
     
@@ -29,6 +29,8 @@ class Shift < ApplicationRecord
     scope :for_past_days, ->(x) {where("date <= ? and date >= ? ", Date.current, x.days.ago)}
     scope :by_store,      -> { joins(assignment: :store).order('name') }
     scope :by_employee,   -> { joins(assignment: :employee).order('last_name, first_name') }
+
+    scope :for_manager,  ->(manager_id) { joins(:assignment).where("store_id in (?)", Assignment.all.select("store_id").where("employee_id = ? ",manager_id)) }
 
     def completed?
         self.shift_jobs.to_a.size != 0

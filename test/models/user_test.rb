@@ -30,12 +30,12 @@ class UserTest < ActiveSupport::TestCase
       remove_users
     end
     
-    
     should "identify a non-active employee as part of an invalid user" do
       @fred = FactoryBot.build(:employee, first_name: "Fred", active: false)
-      inactive_employee = FactoryBot.build(:user, email: "fred@gmail.com", password_digest: "qwertyuiop")
-      assert_equal false,inactive_employee.valid?
+      inactive_employee = FactoryBot.build(:user, employee: @fred, email: "fred@gmail.com")
+      assert_equal false, inactive_employee.valid?
     end
+    
   end
 
 end

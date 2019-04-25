@@ -16,9 +16,9 @@
       <tr>
         <td><%= shift_job.job_id %></td>
         <td><%= shift_job.shift_id %></td>
-        <td><%= link_to 'Show', shift_job %></td>
-        <td><%= link_to 'Edit', edit_shift_job_path(shift_job) %></td>
-        <td><%= link_to 'Destroy', shift_job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', shift_job, :class=> "teal-text text-lighten-1" %></td>
+        <td><%= link_to 'Edit', edit_shift_job_path(shift_job), :class=> "teal-text text-lighten-1" %></td>
+        <td><%= link_to 'Destroy', shift_job, method: :delete, data: { confirm: 'Are you sure?' }, :class=> "teal-text text-lighten-1" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Shift Job', new_shift_job_path %>
+<%= link_to 'New Shift Job', new_shift_job_path, :class=> "btn waves-effect waves-teal" %>

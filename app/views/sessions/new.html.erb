@@ -1,15 +1,18 @@
 <p id="alert"><%= alert %></p>
-<h1>Login</h1>
+<h2>Login</h2>
 <%= form_tag sessions_path do |form| %>
-  <div class="field">
+  <div class="input-field">
     <%= label_tag :email %>
     <%= text_field_tag :email %>
   </div>
-  <div class="field">
+  <div class="input-field">
     <%= label_tag :password %>
     <%= password_field_tag :password %>
   </div>
   <div class="actions">
-    <%= submit_tag "Login" %>
+    <%= submit_tag "Login", :class=> "btn waves-effect waves-teal" %>
   </div>
+  <div class="row"></div>
+  
+  
 <% end %>

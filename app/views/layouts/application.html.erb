@@ -37,15 +37,23 @@
         <li><%= link_to "List Active Employees", employee_active_path %></li>
         <li><%= link_to "List Inactive Employees", employee_inactive_path %></li>
         <li class="divider" tabindex="-1"></li>
-        <li><%= link_to "Add an Employee", new_employee_path %></li>
+        <% if current_employee!=nil && current_employee.role=="admin" then  %>
+            <li><%= link_to "Add an Employee", new_employee_path %></li>
+        <% end %>
     </ul> 
     
     <ul id="dropdown2" class="dropdown-content">
+        <% if  current_employee!=nil && (current_employee.role=="admin" || current_employee.role=="manager" || current_employee.role=="employee") %>
         <li><%= link_to "List All Stores", stores_path %></li>
+        <% end %>
         <li><%= link_to "List Active Stores", store_active_path %></li>
+        <% if  current_employee!=nil && (current_employee.role=="admin" || current_employee.role=="manager" || current_employee.role=="employee") %>
         <li><%= link_to "List Inactive Stores", store_inactive_path %></li>
+        <% end %>
+        <% if current_employee!=nil %>
         <li class="divider" tabindex="-1"></li>
         <li><%= link_to "Add a Store", new_store_path %></li>
+        <% end %>
     </ul> 
     
     <ul id="dropdown3" class="dropdown-content">
@@ -54,7 +62,7 @@
         <li><%= link_to "List Past Assignments", assignment_past_path %></li>
         <li class="divider" tabindex="-1"></li>
         <li><%= link_to "Add an Assignment", new_assignment_path %></li>
-    </ul> 
+    </ul>
     
         <ul id="dropdown4" class="dropdown-content">
         <li><%= link_to "List All Flavors", flavors_path %></li>
@@ -75,34 +83,65 @@
         <li class="divider" tabindex="-1"></li>
         <li><%= link_to "Add a Job", new_job_path %></li>
     </ul>    
+    
+     <ul id="dropdown8" class="dropdown-content">
+        <li><%= link_to "List All Store Flavors", store_flavors_path %></li>
+        <li class="divider" tabindex="-1"></li>
+        <li><%= link_to "Add a Flavor to a Store", new_store_flavor_path %></li>
+    </ul> 
+    
     <nav>
          <div class="nav-wrapper">
                 &nbsp&nbsp     
-              <a href="/" class="brand-logo">A&M Creamery</a> 
+              <a href="/" class="brand-logo">A&M</a> 
   
     <ul class="right">
        
-
+        <%  if current_employee!=nil %>
         <!-- Dropdown Trigger -->       
         <li><a class="dropdown-button" href="/employees" data-activates="dropdown1">Employees<i class="material-icons right">arrow_drop_down</i></a></li>
-       
+        <% end %>
+        
+       <%  if current_employee!=nil %>
        <!-- Dropdown Trigger -->       
         <li><a class="dropdown-button" href="/assignments" data-activates="dropdown3">Assignments<i class="material-icons right">arrow_drop_down</i></a></li>
+       <% end %>
        
+       <%  if current_employee!=nil %>
         <!-- Dropdown Trigger -->       
         <li><a class="dropdown-button" href="/shifts" data-activates="dropdown5">Shifts<i class="material-icons right">arrow_drop_down</i></a></li>
+       <% end %>
        
+        <%  if current_employee!=nil %>
         <!-- Dropdown Trigger -->       
         <li><a class="dropdown-button" href="/jobs" data-activates="dropdown6">Jobs<i class="material-icons right">arrow_drop_down</i></a></li>
+        <% end %>
+         <%  if current_employee!=nil %>
+        <!-- Dropdown Trigger -->       
+        <li><a class="dropdown-button" href="/shift_jobs" data-activates="dropdown7">Shift Jobs<i class="material-icons right">arrow_drop_down</i></a></li>
+        <% end %>
+        <%  if current_employee!=nil %>
+         <!-- Dropdown Trigger -->       
+        <li><a class="dropdown-button" href="/flavors" data-activates="dropdown4">Flavors<i class="material-icons right">arrow_drop_down</i></a></li>
+        <% end %>
+        
+        <%  if current_employee!=nil %>
+        
+        <!-- Dropdown Trigger -->       
+        <li><a class="dropdown-button" href="/store_flavors" data-activates="dropdown8">Store Flavors<i class="material-icons right">arrow_drop_down</i></a></li>
+        <% end %>
+        
+       
         
         <!-- Dropdown Trigger -->       
         <li><a class="dropdown-button" href="/stores" data-activates="dropdown2">Stores<i class="material-icons right">arrow_drop_down</i></a></li>
         
-         <!-- Dropdown Trigger -->       
-        <li><a class="dropdown-button" href="/flavors" data-activates="dropdown4">Flavors<i class="material-icons right">arrow_drop_down</i></a></li>
-        
         <li><a href="/login">login</a></li>
+        <li><a href="/logout">logout</a></li>
+        
         </ul> 
+        
+      
  
   </div> 
   </nav>

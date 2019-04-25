@@ -9,6 +9,7 @@ module Contexts
     def remove_jobs
       @mixer.destroy
       @cleaner.destroy
+      @salesman.destroy
     end
 
   end

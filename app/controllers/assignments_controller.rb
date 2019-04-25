@@ -4,7 +4,14 @@ class AssignmentsController < ApplicationController
   # GET /assignments
   # GET /assignments.json
   def index
-    @assignments = Assignment.all
+    @employee = current_employee
+    if @employee !=nil then
+      if @employee.role == "admin"
+         @assignments = Assignment.all
+      elsif @employee.role == "employee"
+          @assignments = Assignment.for_employee(@employee.id)
+      end
+    end
   end
 
   def current

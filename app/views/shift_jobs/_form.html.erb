@@ -11,17 +11,18 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :job_id %>
-    <%= form.number_field :job_id %>
+  <div class="input-field">
+    <%= form.label :job_id, :class=>"active"  %>
+    <%= form.select(:job_id, options_for_select(Job.active.map { |p| [ p.id] }, selected: shift_job.job_id), prompt: "Please Select") %>
   </div>
 
-  <div class="field">
-    <%= form.label :shift_id %>
-    <%= form.number_field :shift_id %>
+  <div class="input-field">
+    <%= form.label :shift_id, :class=>"active"  %>
+    <%= form.select(:shift_id, options_for_select(Shift.incompleted.map { |p| [  p.id] }, selected: shift_job.shift_id), prompt: "Please Select") %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+   <div class="actions">  
+	  <%= form.submit :class=>"btn waves-effect waves-light" %>  
+	  <%= link_to 'Cancel', employees_path, :class => 'waves-effect waves-light btn red' %> 
+	</div>
 <% end %>

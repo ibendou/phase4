@@ -29,6 +29,8 @@ class Employee < ApplicationRecord
   scope :managers,        -> { where(role: 'manager') }
   scope :admins,          -> { where(role: 'admin') }
   scope :alphabetical,    -> { order('last_name, first_name') }
+  scope :for_manager,     ->(manager_id) {joins(:assignments).where("end_date=? and store_id in (?)",nil, Assignment.all.select("store_id").where("employee_id = ? ",manager_id))}
+  
   
   # Other methods
   def name
@@ -73,7 +75,7 @@ class Employee < ApplicationRecord
      self.ssn = ssn           # reset self.ssn to new string
    end
    
-  def attempt_make_inactive
+  def try_make_inactive
     make_inactive unless self.destroyed?
   end
 

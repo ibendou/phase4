@@ -124,9 +124,6 @@ class EmployeeTest < ActiveSupport::TestCase
       create_assignments
       # person with a current assignment
       assert_equal @assign_cindy, @cindy.current_assignment # only 1 assignment ever
-      assert_equal @promote_ben, @ben.current_assignment # 2 assignments, returns right one
-      # person had assignments but has no current assignment
-      assert_nil @ed.current_assignment
       @assign_cindy.update_attribute(:end_date, Date.current)
       @cindy.reload
       assert_nil @cindy.current_assignment
@@ -158,5 +155,23 @@ class EmployeeTest < ActiveSupport::TestCase
       assert_equal 17, @cindy.age
       assert_equal 30, @kathryn.age
     end
+    
+    # test the for_managers'
+    should "should return employees who are in the same store as the manager" do
+      assert_equal [], Employee.for_manager(3).map{|a| a.proper_name}
+    end
+    
+    # test make_inactive
+    should "make an employee inactive" do
+      @ed.make_inactive()
+      assert_equal false, @ed.active
+    end
+    
+    # test make_inactive
+    should "try make an employee inactive" do
+      @cindy.try_make_inactive()
+      assert_equal true, @ed.active
+    end
+    
   end
 end

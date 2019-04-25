@@ -4,7 +4,16 @@ class ShiftsController < ApplicationController
   # GET /shifts
   # GET /shifts.json
   def index
-    @shifts = Shift.all
+    @employee = current_employee
+    if @employee !=nil then
+      if @employee.role == "admin"
+         @shifts = Shift.all
+      elsif @employee.role == "employee"
+          @shifts = Shift.for_employee(@employee.id)
+      elsif  @employee.role == "manager"
+          @shifts = Shift.for_manager(@employee.id)
+      end
+    end
   end
 
   # GET /shifts/1
