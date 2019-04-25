@@ -8,9 +8,9 @@ module Contexts
     end
     
     def remove_shifts
-     # @shift_ed.destroy
-      #@shift_ben.destroy
-      #@shift_cindy.destroy
+      @shift_ed.destroy
+      @shift_ben.destroy
+      @shift_cindy.destroy
     end
 
     

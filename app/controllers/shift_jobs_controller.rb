@@ -4,14 +4,7 @@ class ShiftJobsController < ApplicationController
   # GET /shift_jobs
   # GET /shift_jobs.json
   def index
-    @employee = current_employee
-    if @employee !=nil then
-      if @employee.role == "admin"
-         @shift_jobs = ShiftJob.all
-      elsif @employee.role == "employee"
-          @shift_jobs = ShiftJob.for_employee(@employee.id)
-      end
-    end
+    @shift_jobs = ShiftJob.all
   end
 
   # GET /shift_jobs/1

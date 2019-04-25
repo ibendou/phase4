@@ -79,7 +79,7 @@ class StoreTest < ActiveSupport::TestCase
     end
     
     should "shows name" do
-      assert_equal "CMU", @CMU.name
+      assert_equal "CMU", @cmu.name
     end  
     
     # test the scope 'inactive'

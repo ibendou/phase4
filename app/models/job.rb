@@ -8,6 +8,7 @@ class Job < ApplicationRecord
   scope :alphabetical, -> { order('name') }
   scope :active,       -> { where(active: true) }
   scope :inactive,     -> { where(active: false) }
+  scope :for_employee,  ->(employee_id) { where("employee_id = ?", employee_id) }
   
   def destroy
     if (ShiftJob.where("job_id=?",id).size() !=0) then

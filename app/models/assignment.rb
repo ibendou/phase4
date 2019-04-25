@@ -1,14 +1,10 @@
 class Assignment < ApplicationRecord
-  
-  
-  PAYLEVEL = [1, 2, 3, 4, 5, 6]
 # Callbacks
   before_create :end_previous_assignment
   
   # Relationships
   belongs_to :employee
   belongs_to :store
-  has_many :shifts
   
   # Validations
   validates_numericality_of :pay_level, only_integer: true, greater_than: 0, less_than: 7
@@ -57,4 +53,5 @@ class Assignment < ApplicationRecord
     end
   end
 end
+
 

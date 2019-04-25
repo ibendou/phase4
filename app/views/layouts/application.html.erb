@@ -97,7 +97,7 @@
   
     <ul class="right">
        
-        <%  if current_employee!=nil %>
+        <%  if current_employee!=nil && current_employee.role!="employee" %>
         <!-- Dropdown Trigger -->       
         <li><a class="dropdown-button" href="/employees" data-activates="dropdown1">Employees<i class="material-icons right">arrow_drop_down</i></a></li>
         <% end %>
@@ -116,16 +116,16 @@
         <!-- Dropdown Trigger -->       
         <li><a class="dropdown-button" href="/jobs" data-activates="dropdown6">Jobs<i class="material-icons right">arrow_drop_down</i></a></li>
         <% end %>
-         <%  if current_employee!=nil %>
+         <%  if current_employee!=nil && current_employee.role!="employee" %>
         <!-- Dropdown Trigger -->       
         <li><a class="dropdown-button" href="/shift_jobs" data-activates="dropdown7">Shift Jobs<i class="material-icons right">arrow_drop_down</i></a></li>
         <% end %>
-        <%  if current_employee!=nil %>
+        <%  if current_employee!=nil  %>
          <!-- Dropdown Trigger -->       
         <li><a class="dropdown-button" href="/flavors" data-activates="dropdown4">Flavors<i class="material-icons right">arrow_drop_down</i></a></li>
         <% end %>
         
-        <%  if current_employee!=nil %>
+        <%  if current_employee!=nil && current_employee.role!="employee" %>
         
         <!-- Dropdown Trigger -->       
         <li><a class="dropdown-button" href="/store_flavors" data-activates="dropdown8">Store Flavors<i class="material-icons right">arrow_drop_down</i></a></li>

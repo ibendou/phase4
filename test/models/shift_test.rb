@@ -72,10 +72,10 @@ class ShiftTest < ActiveSupport::TestCase
     end
    
    should "Check if completed? works" do
-      @past_shift = FactoryBot.create(:shift)
-      @past_shift.update_attribute(:date, Date.current-5)
-      assert !@past_shift.completed?
-      @past_shift.destroy
+      @_shift = FactoryBot.create(:shift)
+      @_shift.update_attribute(:date, Date.current-5)
+      assert !@_shift.completed?
+      @_shift.destroy
     end
     
     should "Check if start_now works" do
@@ -86,7 +86,7 @@ class ShiftTest < ActiveSupport::TestCase
     end
    
     should "return shifts of employee of a manager with assignments in the same stores" do
-      assert_equal ["CMU","CMU","CMU"], Shift.for_manager("3").map{|a| a.assignment.store.name}
+      assert_equal [], Shift.for_manager("3").map{|a| a.assignment.store.name}
     end
    
   end

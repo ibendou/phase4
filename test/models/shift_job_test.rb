@@ -1,7 +1,8 @@
 require 'test_helper'
 
 class ShiftJobTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
+  should belong_to(:job)
+  should belong_to(:shift)
+  
 end
