@@ -10,10 +10,8 @@ class ShiftJobsController < ApplicationController
     if @employee !=nil then
       if @employee.role == "admin"
          @shift_jobs = ShiftJob.all
-      elsif @employee.role == "employee"
-          @assignments = Assignment.for_employee(@employee.id)
       elsif @employee.role == "manager"
-          @assignments = Assignment.all()
+          @shift_jobs = ShiftJob.for_manager(@employee.id)
       end
     end
   end

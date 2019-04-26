@@ -7,7 +7,7 @@ class Employee < ApplicationRecord
   before_save :reformat_phone
   before_validation :reformat_ssn
   before_destroy :check_dependencies
-  after_rollback :try_deactivate
+  #after_rollback :try_deactivate
   
   
   # Relationships

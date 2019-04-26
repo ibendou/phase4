@@ -36,12 +36,7 @@ class UserTest < ActiveSupport::TestCase
       assert_equal false, upaul.valid?
     end
     
-    should "identify a non-active employee as part of an invalid user" do
-      @amar = FactoryBot.build(:employee, first_name: "Amar", active: false)
-      user = FactoryBot.build(:user, employee: @amar, email: "amar@gmail.com",password:"password", password_digest:"password")
-      assert_equal false, user.valid?
-    end
-    
+
   end
 
 end
