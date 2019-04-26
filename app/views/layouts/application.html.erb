@@ -77,12 +77,11 @@
         <li class="divider" tabindex="-1"></li>
         <li><%= link_to "Add an Shift", new_shift_path %></li>
     </ul> 
-
         <ul id="dropdown6" class="dropdown-content">
         <li><%= link_to "List All Jobs", jobs_path %></li>
         <li class="divider" tabindex="-1"></li>
-        <li><%= link_to "Add a Job", new_job_path %></li>
-    </ul>    
+        <li><%= if current_employee!=nil and current_employee.role=="admin" then   link_to "Add a Job", new_job_path end %></li>
+    </ul> 
     
      <ul id="dropdown8" class="dropdown-content">
         <li><%= link_to "List All Store Flavors", store_flavors_path %></li>
@@ -93,7 +92,9 @@
     <nav>
          <div class="nav-wrapper">
                 &nbsp&nbsp     
-              <a href="/" class="brand-logo">A&M</a> 
+              <a href="/" class="brand-logo">A&M  &nbsp&nbsp <%= current_employee.proper_name %></a>
+               
+       
   
     <ul class="right">
        

@@ -24,6 +24,14 @@ class ShiftsController < ApplicationController
   # GET /shifts/new
   def new
     @shift = Shift.new
+    @employee = current_employee
+    if @employee !=nil then
+      if @employee.role == "admin"
+         @assigments = Assignment.all
+      elsif  @employee.role == "manager"
+         @assigments = Assignment.where("end_date is NULL and store_id=?",  Assignment.where("end_date is NULL and employee_id=?", @employee.id).first.store_id)
+      end
+    end
   end
 
   # GET /shifts/1/edit

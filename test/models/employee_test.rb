@@ -163,13 +163,13 @@ class EmployeeTest < ActiveSupport::TestCase
     
     # test make_inactive
     should "make an employee inactive" do
-      @ed.make_inactive()
+      @ed.deactivate()
       assert_equal false, @ed.active
     end
     
     # test make_inactive
     should "try make an employee inactive" do
-      @cindy.try_make_inactive()
+      @cindy.try_deactivate()
       assert_equal true, @ed.active
     end
     

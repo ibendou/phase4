@@ -6,11 +6,16 @@ class Employee < ApplicationRecord
  # Callbacks
   before_save :reformat_phone
   before_validation :reformat_ssn
+  before_destroy :check_dependencies
+  after_rollback :try_deactivate
+  
   
   # Relationships
   has_many :assignments
   has_many :stores, through: :assignments
+  has_many :shifts, through: :assignments
   has_one :user
+  
   accepts_nested_attributes_for :user
   # Validations
   validates_presence_of :first_name, :last_name, :date_of_birth, :ssn, :role
@@ -29,8 +34,7 @@ class Employee < ApplicationRecord
   scope :managers,        -> { where(role: 'manager') }
   scope :admins,          -> { where(role: 'admin') }
   scope :alphabetical,    -> { order('last_name, first_name') }
-  scope :for_manager,     ->(manager_id) {joins(:assignments).where("end_date=? and store_id in (?)",nil, Assignment.all.select("store_id").where("employee_id = ? ",manager_id))}
-  
+  scope :for_manager,     -> (manager_id) { joins(:assignments).where("end_date is NULL and store_id in (?)", Assignment.select("store_id").where("end_date is NULL and employee_id=?",manager_id))}
   
   # Other methods
   def name
@@ -75,21 +79,19 @@ class Employee < ApplicationRecord
      self.ssn = ssn           # reset self.ssn to new string
    end
    
-  def try_make_inactive
-    make_inactive unless self.destroyed?
+  def try_deactivate
+    deactivate unless self.destroyed?
   end
 
-  def make_inactive
+  def deactivate
     self.active = 0
     self.assignments.current.first.update_attribute(:end_date, Date.today) unless self.assignments.current.first == nil
     self.save
   end
 
-  def check_association
+  def check_dependencies
     if self.shifts.size == 0
       self.assignments.current.first.delete unless self.assignments.current.first == nil
-    else
-      return false
     end
   end
 end

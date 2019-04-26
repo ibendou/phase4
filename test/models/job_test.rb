@@ -14,12 +14,12 @@ class JobTest < ActiveSupport::TestCase
       end
   
       should "return active jobs" do
-          assert_equal 2, Job.active().size()
+          assert_equal ["Cleaning machines", "Selling Icecream "], Job.active().map{|a| a.name}
       end
     
     
       should "return inactive jobs" do
-          assert_equal 1, Job.inactive().size()
+          assert_equal ["Mixing products"], Job.inactive().map{|a| a.name}
       end
     
     
@@ -29,22 +29,33 @@ class JobTest < ActiveSupport::TestCase
 
 
     should "Show that job can only be deleted if the job has never been worked by an employee; otherwise it is made inactive" do
+         
+         #creating a job that is worked by an employee
          @texas = FactoryBot.create(:store, name:"texas")
          @imane = FactoryBot.create(:employee, first_name: "imane", last_name: "bendou", role: "manager", phone: "412-268-2323")
          @imane_ass = FactoryBot.create(:assignment, employee: @imane, store: @texas, start_date: 6.months.ago.to_date, end_date: nil, pay_level: 4)
          @shift_imane = FactoryBot.create(:shift, assignment:@imane_ass)
-         @shift_job_cash = FactoryBot.create(:shift_job, job_id:  @mixer.id)
+         @mopper = FactoryBot.create(:job, name:"Floor Mopper")
+         @shift_job_cash = FactoryBot.create(:shift_job, job: @mopper)
 
-         @mixer.destroy
-       
-         assert_equal 1, Job.inactive.size
-         assert_equal ["Mixing products"], Job.inactive.map{|i| i.name}.sort
-      
+         @mopper.destroy
+         
+         #mopper is not destroyed but made inactive instead     
+         assert_equal false, @mopper.active
+         
          @shift_job_cash.destroy
+         
+         #We destroy the shift then try to destroy the job again. Now the job is deleted because it is nore used in a shift
+         @mopper.destroy
+         assert_equal Job.where("id=?",@mopper.id).size(), 0
+         
+         
+         
          @shift_imane.destroy
          @imane_ass.destroy
          @imane.destroy
          @texas.destroy
+        
     end
 
     end

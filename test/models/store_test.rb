@@ -88,5 +88,11 @@ class StoreTest < ActiveSupport::TestCase
       assert_equal ["Hazelwood"], Store.inactive.alphabetical.map{|s| s.name}
     end
   
+    should "Show that stores are never deleted, only made inactive" do
+       @oakland.destroy()
+       assert_equal @oakland.active, false
+    end
+    
+  
   end
 end

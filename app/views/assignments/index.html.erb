@@ -18,7 +18,7 @@
     <% @assignments.each do |assignment| %>
       <tr>
         <td><%= Store.find(assignment.store_id).name %></td>
-        <td><%= assignment.employee_id %></td>
+        <td><%= Employee.find(assignment.employee_id).proper_name %></td>
         <td><%= assignment.start_date %></td>
         <td><%= assignment.end_date %></td>
         <td><%= assignment.pay_level %></td>

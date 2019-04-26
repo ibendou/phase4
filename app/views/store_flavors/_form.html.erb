@@ -13,12 +13,16 @@
 
   <div class="input-field">
     <%= form.label :store_id, :class=>"active" %>
-    <%= form.number_field :store_id%>
+    <%= form.select(:store_id, options_for_select(Store.for_manager(current_employee.id).map { |p| [ p.name, p.id] }, selected: store_flavor.store_id), prompt: "Please Select") %>
+   
+   
   </div>
 
   <div class="input-field">
     <%= form.label :flavor_id, :class=>"active" %>
-    <%= form.number_field :flavor_id %>
+     <%= form.select(:store_id, options_for_select(Flavor.all.map { |p| [ p.name, p.id] }, selected: store_flavor.flavor_id), prompt: "Please Select") %>
+   
+    
   </div>
 
   <div class="actions">  

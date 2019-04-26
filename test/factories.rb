@@ -31,7 +31,7 @@ FactoryBot.define do
   factory :user do
     association :employee
     email {"egruberman@gmail.com"}
-    password_digest {"password"}
+   # password {"password"}
   end
   
   factory :shift do

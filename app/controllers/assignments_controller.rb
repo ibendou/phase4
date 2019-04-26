@@ -10,6 +10,8 @@ class AssignmentsController < ApplicationController
          @assignments = Assignment.all
       elsif @employee.role == "employee"
           @assignments = Assignment.for_employee(@employee.id)
+      elsif @employee.role == "manager"
+          @assignments = Assignment.for_manager(@employee.id)
       end
     end
   end

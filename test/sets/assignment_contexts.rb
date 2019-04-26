@@ -6,13 +6,13 @@ module Contexts
       @assign_ben = FactoryBot.create(:assignment, employee: @ben, store: @cmu, start_date: 1.year.ago.to_date, end_date: nil,  pay_level: 3)
     #  @promote_ben = FactoryBot.create(:assignment, employee: @ben, store: @cmu, start_date: 6.months.ago.to_date, end_date: nil, pay_level: 4)
       @assign_cindy = FactoryBot.create(:assignment, employee: @cindy, store: @cmu, start_date: 9.months.ago.to_date, end_date: nil)
-     # @assign_kathryn = FactoryBot.create(:assignment, employee: @kathryn, store: @oakland, start_date: 10.months.ago.to_date, end_date: nil, pay_level: 3)
+   #   @assign_kathryn = FactoryBot.create(:assignment, employee: @kathryn, store: @oakland, start_date: 10.months.ago.to_date, end_date: nil, pay_level: 3)
     end
     
     def remove_assignments
-    #  @assign_ed.destroy
-    #  @assign_cindy.destroy
-   #   @assign_ben.destroy
+      @assign_ed.destroy
+      @assign_cindy.destroy
+      @assign_ben.destroy
     #  @promote_ben.destroy
     #  @assign_kathryn.destroy
     end

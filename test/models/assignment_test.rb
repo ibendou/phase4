@@ -107,9 +107,11 @@ class AssignmentTest < ActiveSupport::TestCase
     end
 
     should "end the current assignment if it exists before adding a new assignment for an employee" do
+      @assign_kathryn = FactoryBot.create(:assignment, employee: @kathryn, store: @oakland, start_date: 10.months.ago.to_date, end_date: nil, pay_level: 3)
       @promote_kathryn = FactoryBot.create(:assignment, employee: @kathryn, store: @oakland, start_date: 1.day.ago.to_date, end_date: nil, pay_level: 4)
-      assert_nil (@kathryn.assignments.first.end_date)
+      assert 1.day.ago.to_date, @kathryn.assignments.first.end_date
       @promote_kathryn.destroy
     end
+    
   end
 end

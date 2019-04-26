@@ -36,7 +36,7 @@
 
 <br>
 <div class="col">
-    <%= link_to 'New Employee', new_employee_path, :class=> "btn waves-effect waves-teal" %>
+    <%= if current_employee.role=="admin" then link_to 'New Employee', new_employee_path, :class=> "btn waves-effect waves-teal" end %>
 </div>
 
 <div class="row"></div>

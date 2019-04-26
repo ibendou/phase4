@@ -6,8 +6,19 @@ class EmployeesController < ApplicationController
   # GET /employees.json
 
   def index
-    @employees = Employee.all
+     @employee = current_employee
+    if @employee !=nil then
+      if @employee.role == "admin"
+         @employees = Employee.all
+      elsif @employee.role == "manager"
+          #@employees = Employee.for_manager(@employee.id)
+          @employees = Employee.all
+      end
+    end
   end
+  
+  
+ 
   
   def active
     @employees = Employee.active.alphabetical.paginate(:page => params[:page]).per_page(10)

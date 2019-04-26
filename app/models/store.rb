@@ -24,11 +24,15 @@ class Store < ApplicationRecord
   scope :active,       -> { where(active: true) }
   scope :inactive,     -> { where(active: false) }
 
-  scope :for_manager,     ->(manager_id) {joins(:assignments).where("end_date=nil and employee_id =?", manager_id)}
+  scope :for_manager,     ->(manager_id) {joins(:assignments).where("end_date is NULL and employee_id =?", manager_id)}
   
   # Misc Constants
   STATES_LIST = [['Ohio', 'OH'],['Pennsylvania', 'PA'],['West Virginia', 'WV']]
   
+  #override destroy method. Never delete. Make inactive instead
+  def destroy
+    self.active = false
+  end
 
   
   # Callback code

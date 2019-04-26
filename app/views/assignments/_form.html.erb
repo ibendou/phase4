@@ -39,7 +39,7 @@
 
   <div class="input-field">
     <%= form.label :pay_level, :class=>"active"  %>
-    <%= form.collection_select :pay_level, Assignment::PAYLEVEL, :to_s, :to_s, :include_blank => true %> <br />
+    <%= form.collection_select :pay_level, [1,2,3,4,5,6], :to_s, :to_s, :include_blank => true %> <br />
   </div>
 
 

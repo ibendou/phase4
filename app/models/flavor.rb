@@ -10,18 +10,10 @@ class Flavor < ApplicationRecord
   scope :active,       -> { where(active: true) }
   scope :inactive,     -> { where(active: false) }
 
-  before_destroy :cancel_destroy
-  after_rollback :make_inactive
-
-
-  private
-  def cancel_destroy
-  	return false
+  #override destroy method. Never delete. Make inactive instead
+  def destroy
+    self.active = false
   end
   
-  def make_inactive
-  	self.active = 0
-  	self.save
-  end
     
 end

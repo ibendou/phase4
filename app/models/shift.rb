@@ -30,8 +30,9 @@ class Shift < ApplicationRecord
     scope :by_store,      -> { joins(assignment: :store).order('name') }
     scope :by_employee,   -> { joins(assignment: :employee).order('last_name, first_name') }
 
-    scope :for_manager,  ->(manager_id) { joins(:assignment).where("store_id in (?)", Assignment.all.select("store_id").where("employee_id = ? ",manager_id)) }
-
+   # scope :for_manager,  ->(manager_id) { joins(:assignment).where("start_date is NULL and store_id in (?)", Assignment.select("store_id").where("employee_id = ? ",manager_id)) }
+    scope :for_manager,     -> (manager_id) { joins(:assignment).where("end_date is NULL and store_id in (?)", Assignment.select("store_id").where("end_date is NULL and employee_id=?",manager_id))}
+ 
     def completed?
         self.shift_jobs.to_a.size != 0
     end

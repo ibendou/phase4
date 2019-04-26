@@ -16,12 +16,12 @@ class FlavorTest < ActiveSupport::TestCase
       end
   
       should "return active flavors" do
-          assert_equal 1, Flavor.active().size()
+          assert_equal ["Lemon "], Flavor.active().map{|a| a.name}
       end
     
     
       should "return inactive flavors" do
-          assert_equal 2, Flavor.inactive().size()
+          assert_equal ["Vanilla", "Chocolate"], Flavor.inactive().map{|a| a.name}
       end
     
     
@@ -31,9 +31,8 @@ class FlavorTest < ActiveSupport::TestCase
       
       
       should "Show that flavors are never deleted, only made inactive" do
-      @chocolate.destroy
-      assert_equal 1, Flavor.inactive.size
-      assert_equal ["Vanilla"], Flavor.inactive.map{|i| i.name}.sort
+         @lemon.destroy
+         assert_equal @lemon.active, false
       end
     end
 end

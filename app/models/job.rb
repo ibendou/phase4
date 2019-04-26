@@ -10,9 +10,12 @@ class Job < ApplicationRecord
   scope :inactive,     -> { where(active: false) }
   scope :for_employee,  ->(employee_id) { where("employee_id = ?", employee_id) }
   
+  #override destroy method. Make inactive of job used in a shift
   def destroy
-    if (ShiftJob.where("job_id=?",id).size() !=0) then
-      active = true
+    if (ShiftJob.where("job_id=?",self.id).size() ==0) then
+      super
+    else
+      self.active = false
     end
   end 
 end
